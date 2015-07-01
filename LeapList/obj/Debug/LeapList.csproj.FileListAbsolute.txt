@@ -23,3 +23,5 @@ C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Mvc.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.csprojResolveAssemblyReference.cache
 C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.pdb
+C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Moq.dll
+C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Moq.xml

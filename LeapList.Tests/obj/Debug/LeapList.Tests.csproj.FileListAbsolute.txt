@@ -24,3 +24,5 @@ C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPage
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.pdb
+C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\Moq.dll
+C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\Moq.xml
