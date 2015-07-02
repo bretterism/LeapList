@@ -28,3 +28,5 @@ C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\Moq.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\Moq.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\System.Web.Helpers.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.Properties.Resources.resources
+C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.csproj.GenerateResource.Cache

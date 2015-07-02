@@ -1,0 +1,500 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:enc="http://purl.oclc.org/net/rss_2.0/enc#"
+ xmlns:ev="http://purl.org/rss/1.0/modules/event/"
+ xmlns:content="http://purl.org/rss/1.0/modules/content/"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:admin="http://webns.net/mvcb/"
+>
+
+  <channel rdf:about="https://corvallis.craigslist.org/search/bka?format=rss&#x26;amp;format=rss">
+    <title>craigslist corvallis | books &#x26;amp; magazines search </title>
+    <link>https://corvallis.craigslist.org/search/bka?format=rss</link>
+    <description></description>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:publisher>robot@craigslist.org</dc:publisher>
+    <dc:creator>robot@craigslist.org</dc:creator>
+    <dc:source>https://corvallis.craigslist.org/search/bka?format=rss&#x26;amp;format=rss</dc:source>
+    <dc:title>craigslist corvallis | books &#x26;amp; magazines search </dc:title>
+    <dc:type>Collection</dc:type>
+    <syn:updateBase>2015-07-01T18:41:54-07:00</syn:updateBase>
+    <syn:updateFrequency>1</syn:updateFrequency>
+    <syn:updatePeriod>hourly</syn:updatePeriod>
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bkd/5102618758.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5060783964.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5076336646.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5101944595.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5101806105.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5060712580.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5080048827.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5101210189.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5101205334.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5101200371.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5101107725.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5100952377.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5100924953.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5100773985.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5087219976.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5080401186.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5100224556.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5100182847.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5060606541.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5056806363.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5099946109.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5099534819.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5099464817.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5087196575.html" />
+        <rdf:li rdf:resource="http://corvallis.craigslist.org/bks/5087244255.html" />
+      </rdf:Seq>
+    </items>
+  </channel>
+  <item rdf:about="http://corvallis.craigslist.org/bkd/5102618758.html">
+    <title><![CDATA[Attention Book Collectors. GONE WITH THE WIND 2nd Edition (Albany OR) &#x0024;40]]></title>
+    <link>http://corvallis.craigslist.org/bkd/5102618758.html</link>
+    <description>
+      <![CDATA[We Have A November 1936 Printing 2nd Edition Of Gone With The Wind. In Very Good Condition. Will Go Fast At $40.00. What A Great Christmas Gift!. Credit And Debit Cards Accepted. G&L]]>
+    </description>
+    <dc:date>2015-07-01T17:36:10-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bkd/5102618758.html</dc:source>
+    <dc:title><![CDATA[Attention Book Collectors. GONE WITH THE WIND 2nd Edition (Albany OR) &#x0024;40]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00606_haSFP3qvlvC_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-07-01T17:36:10-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5060783964.html">
+    <title><![CDATA[Anatomy and Physiology Books &#x0024;80]]></title>
+    <link>http://corvallis.craigslist.org/bks/5060783964.html</link>
+    <description>
+      <![CDATA[All you need for A&P series at OSU or LBCC 
+Prefer to sell all together for $80 obo or make an offer on what you need 
+Human Anatomy & Physiology ninth edition ISBN 9780321743268 
+Human Anatomy & Physiology Lab Manual ISBN 9780321765604 
+A Brief Atla [...]]]>
+    </description>
+    <dc:date>2015-07-01T16:03:12-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5060783964.html</dc:source>
+    <dc:title><![CDATA[Anatomy and Physiology Books &#x0024;80]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00l0l_7ZSUN2qXxQ6_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-07-01T16:03:12-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5076336646.html">
+    <title><![CDATA[Hearst's International Cosmopolitan Dec 1925 (Albany) &#x0024;35]]></title>
+    <link>http://corvallis.craigslist.org/bks/5076336646.html</link>
+    <description><![CDATA[Hearst's International Cosmopolitan December 1925, Vol. LXXIX No.6. Cover art by Harrison Fisher. A wonderful collection of stories, articles and advertisements of the day. This periodical has been read and handled, but it is complete without any mis [...]]]></description>
+    <dc:date>2015-07-01T11:34:15-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5076336646.html</dc:source>
+    <dc:title><![CDATA[Hearst's International Cosmopolitan Dec 1925 (Albany) &#x0024;35]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00D0D_7mbsY9DcQzW_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-07-01T11:34:15-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5101944595.html">
+    <title><![CDATA[Doing a Masters in Education? (Millersburg) &#x0024;25]]></title>
+    <link>http://corvallis.craigslist.org/bks/5101944595.html</link>
+    <description>
+      <![CDATA[A variety of books used in the MSEd program at Western Oregon University. 
+Titles include: 
+The Teaching Gap - Stigler and Hiebert 
+The Book of learning and Forgetting - Frank Smith 
+Educational Psychology 
+How Students Learn - National Research Coun [...]]]>
+    </description>
+    <dc:date>2015-07-01T10:57:25-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5101944595.html</dc:source>
+    <dc:title><![CDATA[Doing a Masters in Education? (Millersburg) &#x0024;25]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-07-01T10:57:25-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5101806105.html">
+    <title><![CDATA[Paul Simon for Classical Guitar Sheet Music 1977 (Albany) &#x0024;20]]></title>
+    <link>http://corvallis.craigslist.org/bks/5101806105.html</link>
+    <description>
+      <![CDATA[Paul Simon for Classical Guitar Sheet Music 1977 
+Has some fading along top right of cover along the spine that continues on partway to the the back cover. Has various bends, creases, fading and worn edges as shown in pictures. Overall good condition [...]]]>
+    </description>
+    <dc:date>2015-07-01T09:47:26-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5101806105.html</dc:source>
+    <dc:title><![CDATA[Paul Simon for Classical Guitar Sheet Music 1977 (Albany) &#x0024;20]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00t0t_kQfia57n1Px_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-07-01T09:47:26-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5060712580.html">
+    <title><![CDATA[Epidemiology 101 &#x0024;30]]></title>
+    <link>http://corvallis.craigslist.org/bks/5060712580.html</link>
+    <description><![CDATA[Finished the class so I do not need this book anymore.]]></description>
+    <dc:date>2015-07-01T09:03:12-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5060712580.html</dc:source>
+    <dc:title><![CDATA[Epidemiology 101 &#x0024;30]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00g0g_25teoDkUOlr_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-07-01T09:03:12-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5080048827.html">
+    <title><![CDATA[2070 books for sale (Eugene) &#x0024;5000]]></title>
+    <link>http://corvallis.craigslist.org/bks/5080048827.html</link>
+    <description>
+      <![CDATA[Hello! 
+I work with a media company that recently sent to me a large lot of new books. 
+Looking to move these this month if possible. 
+Was hoping to get about $3.00 a book, but send me your offer. 
+If you write, I will send a .xlsx list and how many  [...]]]>
+    </description>
+    <dc:date>2015-07-01T07:26:38-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5080048827.html</dc:source>
+    <dc:title><![CDATA[2070 books for sale (Eugene) &#x0024;5000]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00j0j_EOVHMUfw6j_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-07-01T07:26:38-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5101210189.html">
+    <title><![CDATA[Brief Calculus and its Applications OSU (corvallis) &#x0024;20]]></title>
+    <link>http://corvallis.craigslist.org/bks/5101210189.html</link>
+    <description>
+      <![CDATA[Brief Calculus and its Applications Paperback -- 2014 
+by Larry Goldstein (Author) 
+custom edition osu 
+Paperback 
+Publisher: n/a; 2nd edition (2014) 
+ISBN-10: 1269461559 
+ISBN-13: 978-1269461559 
+Product Dimensions: 11.1 x 8.7 x 0.9 inches 
+Shipping [...]]]>
+    </description>
+    <dc:date>2015-06-30T22:41:16-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5101210189.html</dc:source>
+    <dc:title><![CDATA[Brief Calculus and its Applications OSU (corvallis) &#x0024;20]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00s0s_9GiLhlvEteH_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T22:41:16-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5101205334.html">
+    <title><![CDATA[Social Problems (Custom Edition for Oregon State University) (corvallis) &#x0024;20]]></title>
+    <link>http://corvallis.craigslist.org/bks/5101205334.html</link>
+    <description>
+      <![CDATA[Social Problems (Custom Edition for Oregon State University) Paperback -- 2013 
+by Ralph B. McNeal, Jr., Betsy Lucal, Morten G. Ender Kathleen A. Tiemann (Editor) 
+Product Details 
+Paperback: 291 pages 
+Publisher: Pearson (2013) 
+ISBN-10: 1269100939  [...]]]>
+    </description>
+    <dc:date>2015-06-30T22:25:24-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5101205334.html</dc:source>
+    <dc:title><![CDATA[Social Problems (Custom Edition for Oregon State University) (corvallis) &#x0024;20]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-06-30T22:25:24-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5101200371.html">
+    <title><![CDATA[osu geo 105 diversity amid globalization (corvallis) &#x0024;30]]></title>
+    <link>http://corvallis.craigslist.org/bks/5101200371.html</link>
+    <description>
+      <![CDATA[Diversity & Globalization GEOSCIENCES 105--Custom Edition for Oregon State University Paperback -- January 1, 2012 
+Product Details 
+Paperback 
+ISBN-10: 1256279897 
+ISBN-13: 978-1256279891 
+Product Dimensions: 8.4 x 5.8 x 0.7 inches 
+Shipping Weight: [...]]]>
+    </description>
+    <dc:date>2015-06-30T22:16:25-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5101200371.html</dc:source>
+    <dc:title><![CDATA[osu geo 105 diversity amid globalization (corvallis) &#x0024;30]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-06-30T22:16:25-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5101107725.html">
+    <title><![CDATA[Biology 101 textbook for 2015 2016 school year (Albany) &#x0024;30]]></title>
+    <link>http://corvallis.craigslist.org/bks/5101107725.html</link>
+    <description><![CDATA[Good condition bought but had to drop the class]]></description>
+    <dc:date>2015-06-30T20:11:05-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5101107725.html</dc:source>
+    <dc:title><![CDATA[Biology 101 textbook for 2015 2016 school year (Albany) &#x0024;30]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00V0V_8w0unXORciy_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T20:11:05-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5100952377.html">
+    <title><![CDATA[...Books...Adult &amp; Children]]></title>
+    <link>http://corvallis.craigslist.org/bks/5100952377.html</link>
+    <description><![CDATA[Check us out today at. . .http://www.amazon.com/shops/A2LSRTZSW3B2BE ]]></description>
+    <dc:date>2015-06-30T17:53:17-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5100952377.html</dc:source>
+    <dc:title><![CDATA[...Books...Adult &amp; Children]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-06-30T17:53:17-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5100924953.html">
+    <title><![CDATA[Biology music algebra business book]]></title>
+    <link>http://corvallis.craigslist.org/bks/5100924953.html</link>
+    <description>
+      <![CDATA[Tenth edition business essentials 65$ 
+College algebra 55$ 
+General biology 45$ 
+Understanding music 40$ 
+Text 
+ <a href="/fb/crv/bks/5100924953" class="showcontact" title="click to show contact info">show contact info</a>
+]]>
+    </description>
+    <dc:date>2015-06-30T17:32:06-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5100924953.html</dc:source>
+    <dc:title><![CDATA[Biology music algebra business book]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00Y0Y_1CPjzbIfgXp_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T17:32:06-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5100773985.html">
+    <title><![CDATA[Durant Story of Civilization (Corvallis) &#x0024;80]]></title>
+    <link>http://corvallis.craigslist.org/bks/5100773985.html</link>
+    <description><![CDATA[For sale a complete set of Will and Auriel Durant "Story of Civilization" in 11 volumes. Price is $80 cash only, no checks or money orders.]]></description>
+    <dc:date>2015-06-30T15:46:05-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5100773985.html</dc:source>
+    <dc:title><![CDATA[Durant Story of Civilization (Corvallis) &#x0024;80]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00Y0Y_1HW7du23n92_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T15:46:05-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5087219976.html">
+    <title><![CDATA[2015 CPT New Procedural Coding Expert - NEW-$40-will deliver! (Philomath) &#x0024;40]]></title>
+    <link>http://corvallis.craigslist.org/bks/5087219976.html</link>
+    <description><![CDATA[2015 CPT Procedural Coding Expert coding book - I bought an extra and don't need this one. I wrote "CPT" on the top and bottom edges, see photos. Retail price was $48.33 plus shipping charges. Will deliver in Albany / Corvallis / Philomath area.]]></description>
+    <dc:date>2015-06-30T15:04:10-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5087219976.html</dc:source>
+    <dc:title><![CDATA[2015 CPT New Procedural Coding Expert - NEW-$40-will deliver! (Philomath) &#x0024;40]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00P0P_kc925bHChgr_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T15:04:10-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5080401186.html">
+    <title><![CDATA[Antique Flower / Garden Books (Philomath) &#x0024;25]]></title>
+    <link>http://corvallis.craigslist.org/bks/5080401186.html</link>
+    <description>
+      <![CDATA[Antique flower and garden books - some very old - several are fabric bound 
+$25.00 for all 
+cash only 
+651-955-284two]]>
+    </description>
+    <dc:date>2015-06-30T11:30:24-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5080401186.html</dc:source>
+    <dc:title><![CDATA[Antique Flower / Garden Books (Philomath) &#x0024;25]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/01414_6W3rXYTGtsX_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T11:30:24-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5100224556.html">
+    <title><![CDATA[The Brides of Webster County (albany) &#x0024;10]]></title>
+    <link>http://corvallis.craigslist.org/bks/5100224556.html</link>
+    <description>
+      <![CDATA[Wanda E Brunstetter's four best selling Romance Novels in one Volume. 
+"Going Home" 
+"On Her Own" 
+"Dear to Me" 
+"Allison's Journey" 
+Look past the idyllic countryside and meet four Missouri women who are struggling to meet the expectations of their  [...]]]>
+    </description>
+    <dc:date>2015-06-30T11:00:09-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5100224556.html</dc:source>
+    <dc:title><![CDATA[The Brides of Webster County (albany) &#x0024;10]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00a0a_5060zYXo3Ep_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T11:00:09-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5100182847.html">
+    <title><![CDATA[Brides of Lancaster County (Albany) &#x0024;10]]></title>
+    <link>http://corvallis.craigslist.org/bks/5100182847.html</link>
+    <description>
+      <![CDATA[Wanda E Brunstetter's four bestselling Romance Novels in one volume. 
+"A Merry Heart" 
+"Looking for a Miracle" 
+"Plain & Fancy" 
+"The Hope Chest" 
+Strong family and community tie's merge in Pennsylvania Amish Country, where four young women seek God' [...]]]>
+    </description>
+    <dc:date>2015-06-30T10:35:48-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5100182847.html</dc:source>
+    <dc:title><![CDATA[Brides of Lancaster County (Albany) &#x0024;10]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00v0v_gU1j0v36LNm_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T10:35:48-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5060606541.html">
+    <title><![CDATA[Jane Eyre (Corvallis) &#x0024;150]]></title>
+    <link>http://corvallis.craigslist.org/bks/5060606541.html</link>
+    <description>
+      <![CDATA[I am selling a copy of "Jane Eyre" by Charlotte Bronte, published in 1862. 
+The book is in fair condition. 
+Asking $150. 
+Please call or text at 
+ <a href="/fb/crv/bks/5060606541" class="showcontact" title="click to show contact info">show contact info</a>
+ or come and see this book at 1430 NW 9th Street in Corvallis.]]>
+    </description>
+    <dc:date>2015-06-30T09:52:18-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5060606541.html</dc:source>
+    <dc:title><![CDATA[Jane Eyre (Corvallis) &#x0024;150]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00U0U_6KsmWI3Ddpd_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T09:52:18-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5056806363.html">
+    <title><![CDATA[Jack and Jill (Corvallis) &#x0024;20]]></title>
+    <link>http://corvallis.craigslist.org/bks/5056806363.html</link>
+    <description>
+      <![CDATA[I am selling a copy of "Jack and Jill" by Louisa M. Alcott, copyright 1880. 
+The book is in fair condition. 
+Asking $20 OBO. 
+Please call or text Ed at 
+ <a href="/fb/crv/bks/5056806363" class="showcontact" title="click to show contact info">show contact info</a>
+ or come and see this book at 1430 NW 9th Street in Corvallis.]]>
+    </description>
+    <dc:date>2015-06-30T09:51:54-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5056806363.html</dc:source>
+    <dc:title><![CDATA[Jack and Jill (Corvallis) &#x0024;20]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00a0a_468zYkwfS0d_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T09:51:54-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5099946109.html">
+    <title><![CDATA[Set of 3 What to Expect When (Albany)]]></title>
+    <link>http://corvallis.craigslist.org/bks/5099946109.html</link>
+    <description>
+      <![CDATA[What to Expect When You're Expecting, What to Expect The First Year, & What to Expect The Toddler Years books. Set of all three for $15.00 o.b.o. Call 
+or text 
+ <a href="/fb/crv/bks/5099946109" class="showcontact" title="click to show contact info">show contact info</a>
+]]>
+    </description>
+    <dc:date>2015-06-30T08:42:19-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5099946109.html</dc:source>
+    <dc:title><![CDATA[Set of 3 What to Expect When (Albany)]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/01616_hj9LYjKq5wi_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-30T08:42:19-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5099534819.html">
+    <title><![CDATA[OSU psy201Psychology Custom Loose Leaf (corvallis) &#x0024;30]]></title>
+    <link>http://corvallis.craigslist.org/bks/5099534819.html</link>
+    <description>
+      <![CDATA[Author Schacter (2) 
+ISBN: 9781464195617 
+must purchase access code separately 
+call text email 
+
+ <a href="/fb/crv/bks/5099534819" class="showcontact" title="click to show contact info">show contact info</a>
+]]>
+    </description>
+    <dc:date>2015-06-30T00:13:42-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5099534819.html</dc:source>
+    <dc:title><![CDATA[OSU psy201Psychology Custom Loose Leaf (corvallis) &#x0024;30]]></dc:title>
+    <dc:type>text</dc:type>
+    <dcterms:issued>2015-06-30T00:13:42-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5099464817.html">
+    <title><![CDATA[Introduction to Animal Science Third Custom Oregon State University (corvallis) &#x0024;50]]></title>
+    <link>http://corvallis.craigslist.org/bks/5099464817.html</link>
+    <description>
+      <![CDATA[Introduction to Animal Science Third Custom Oregon State University Paperback -- 2013 
+by W. Stephen Damron (Author) 
+Paperback 
+Publisher: n/a (2013) 
+ISBN-10: 1256876526 
+ISBN-13: 978-1256876526 
+Product Dimensions: 10.9 x 8.5 x 1.1 inches 
+Shippin [...]]]>
+    </description>
+    <dc:date>2015-06-29T21:49:29-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5099464817.html</dc:source>
+    <dc:title><![CDATA[Introduction to Animal Science Third Custom Oregon State University (corvallis) &#x0024;50]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00D0D_3UHAp8kbm8x_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-29T21:49:29-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5087196575.html">
+    <title><![CDATA[Automotive books (corvallis)]]></title>
+    <link>http://corvallis.craigslist.org/bks/5087196575.html</link>
+    <description>
+      <![CDATA[I'm on the road a lot so it might take a little to get back with you. No trades, cash only, will take $10 off second set of books if you buy more then one. 
+Engine Performance diagnosis ------------------$80 
+Automotive engines with task sheets ----- [...]]]>
+    </description>
+    <dc:date>2015-06-29T20:35:46-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5087196575.html</dc:source>
+    <dc:title><![CDATA[Automotive books (corvallis)]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00m0m_di2FqIDdmbV_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-29T20:35:46-07:00</dcterms:issued>
+  </item>
+  <item rdf:about="http://corvallis.craigslist.org/bks/5087244255.html">
+    <title><![CDATA[Diesel books (corvallis)]]></title>
+    <link>http://corvallis.craigslist.org/bks/5087244255.html</link>
+    <description>
+      <![CDATA[I'm on the road a lot so it might take a little to get back with you. No trades, cash only, will take $10 off second set of books if you buy more then one. 
+Brakes, steering and suspension system --------- $100 
+Heavy equipment systems -------------- [...]]]>
+    </description>
+    <dc:date>2015-06-29T20:35:29-07:00</dc:date>
+    <dc:language>en-us</dc:language>
+    <dc:rights>&#x26;copy; 2015 &#x3C;span class="desktop"&#x3E;craigslist&#x3C;/span&#x3E;&#x3C;span class="mobile"&#x3E;CL&#x3C;/span&#x3E;</dc:rights>
+    <dc:source>http://corvallis.craigslist.org/bks/5087244255.html</dc:source>
+    <dc:title><![CDATA[Diesel books (corvallis)]]></dc:title>
+    <dc:type>text</dc:type>
+    <enc:enclosure resource="http://images.craigslist.org/00x0x_q2QCaVUr0Y_300x300.jpg" type="image/jpeg"/>
+    <dcterms:issued>2015-06-29T20:35:29-07:00</dcterms:issued>
+  </item>
+</rdf:RDF>

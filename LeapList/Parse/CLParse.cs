@@ -6,13 +6,14 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Xml;
 
+
 namespace LeapList.Parse
 {
-    public class CLParse
+    public static class CLParse
     {
         private static Regex RegPrice = new Regex(@".*&#x0024;(?<price>\d+)");
 
-        public static List<CLItem> GetItemList(XmlDocument doc)
+        public static List<CLItem> GetItemList(this XmlDocument doc)
         {
             XmlNodeList nodes = doc.GetElementsByTagName("item");
             List<CLItem> items = new List<CLItem>();
