@@ -116,14 +116,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ListController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Dependencies\NinjectDependencyResolver.cs" />
     <Compile Include="Models\CLItem.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\SearchCriteria.cs" />

@@ -1,9 +1,6 @@
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\LeapList.dll.config
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\LeapList.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\LeapList.pdb
-C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Ninject.dll
-C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Ninject.Web.Common.dll
-C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Ninject.Web.Mvc.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Helpers.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Mvc.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Razor.dll
@@ -11,9 +8,6 @@ C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Webpages.Deployment
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Webpages.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Webpages.Razor.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\WebActivatorEx.dll
-C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Ninject.xml
-C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Ninject.Web.Common.xml
-C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\Ninject.Web.Mvc.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Razor.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Webpages.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\System.Web.Webpages.Deployment.xml
