@@ -34,14 +34,13 @@ namespace LeapList.Controllers
             };
        
             doc.Load(SearchItems.BuildHttp(sc, profile));
-            var results = doc.SearchFor(searchCriteria.SearchText);
-            
-            return View("Result", results);
+
+            return View("Result", doc.GetItemList());
         }
 
-        public ActionResult Result(IEnumerable<CLItem> results)
+        public ActionResult Result(List<CLItem> results)
         {
-            return View(results.ToList());
+            return View(results);
         }
     }
 }
