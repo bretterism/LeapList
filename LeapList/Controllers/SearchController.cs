@@ -12,15 +12,36 @@ namespace LeapList.Controllers
 {
     public class SearchController : Controller
     {
-        public ActionResult Index(string searchText)
+        private XmlDocument doc;
+        private SearchCriteria searchCriteria;
+        
+        [HttpGet]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Index(SearchCriteria sc)
         {
             XmlDocument doc = new XmlDocument();
+            searchCriteria = sc;
 
-            // TODO: use URL creator from search criteria instead of hard-link
-            doc.Load(@"https://corvallis.craigslist.org/search/bka?format=rss");
+            // TODO: add profile capabilities
+            Profile profile = new Profile()
+            {
+                City = "corvallis"
+            };
+       
+            doc.Load(SearchItems.BuildHttp(sc, profile));
+            var results = doc.SearchFor(searchCriteria.SearchText);
+            
+            return View("Result", results);
+        }
 
-            ViewBag.SearchResults = doc.SearchFor(searchText);
-            return View();
+        public ActionResult Result(IEnumerable<CLItem> results)
+        {
+            return View(results.ToList());
         }
     }
 }

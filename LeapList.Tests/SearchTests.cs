@@ -27,5 +27,25 @@ namespace LeapList.Tests
             Assert.IsNotNull(item);
             Assert.AreEqual(item.Title, "Anatomy and Physiology Books $80");
         }
+
+        [TestMethod]
+        public void TestBuildHttp()
+        {
+            SearchCriteria sc = new SearchCriteria()
+            {
+                Category = "ata",
+                MaxPrice = 30,
+                SearchText = "foobar"
+            };
+
+            Profile p = new Profile()
+            {
+                City = "corvallis",
+            };
+
+            string url = SearchItems.BuildHttp(sc, p);
+
+            Assert.AreEqual(@"https://corvallis.craigslist.org/search/ata?max_price=30&query=foobar&format=rss", url);
+        }
     }
 }

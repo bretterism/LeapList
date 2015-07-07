@@ -132,6 +132,7 @@
     </Compile>
     <Compile Include="Dependencies\NinjectDependencyResolver.cs" />
     <Compile Include="Models\CLItem.cs" />
+    <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\SearchCriteria.cs" />
     <Compile Include="Parse\CLParse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -145,6 +146,7 @@
     <Content Include="Views\List\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Search\Result.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
