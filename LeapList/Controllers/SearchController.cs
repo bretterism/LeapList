@@ -14,6 +14,12 @@ namespace LeapList.Controllers
     {
         public ActionResult Index(string searchText)
         {
+            XmlDocument doc = new XmlDocument();
+
+            // TODO: use URL creator from search criteria instead of hard-link
+            doc.Load(@"https://corvallis.craigslist.org/search/bka?format=rss");
+
+            ViewBag.SearchResults = doc.SearchFor(searchText);
             return View();
         }
     }

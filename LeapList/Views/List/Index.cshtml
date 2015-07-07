@@ -1,11 +1,11 @@
-﻿@model LeapList.Models.CLItem
+﻿@model IEnumerable<LeapList.Models.CLItem>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <table>
-    @foreach (LeapList.Models.CLItem i in ViewBag.Items)
+    @foreach (LeapList.Models.CLItem i in Model)
     {
         <tr>
             <td>@i.Title</td>

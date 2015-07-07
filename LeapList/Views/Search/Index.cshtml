@@ -23,4 +23,11 @@
         <th>Title</th>
         <th>Price</th>
     </tr>
+    @foreach (LeapList.Models.CLItem m in ViewBag.SearchResults)
+    {
+        <tr>
+            <td>@m.Title</td>
+            <td>@m.Price</td>
+        </tr>
+    }
 </table>
