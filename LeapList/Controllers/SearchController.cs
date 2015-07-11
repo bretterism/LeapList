@@ -1,6 +1,7 @@
 ﻿using LeapList.Models;
 using LeapList.Parse;
 using LeapList.Search;
+using LeapList.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace LeapList.Controllers
 {
     public class SearchController : Controller
     {
+        private CLContext db = new CLContext();
         private XmlDocument doc;
         private SearchCriteria searchCriteria;
         

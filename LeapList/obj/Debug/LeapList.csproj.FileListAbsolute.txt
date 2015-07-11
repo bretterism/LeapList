@@ -39,3 +39,7 @@ C:\Users\Brem Ham\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Razor.x
 C:\Users\Brem Ham\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csprojResolveAssemblyReference.cache
 C:\Users\Brem Ham\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.dll
 C:\Users\Brem Ham\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.pdb
+C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.dll
+C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.SqlServer.dll
+C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.xml
+C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.SqlServer.xml
