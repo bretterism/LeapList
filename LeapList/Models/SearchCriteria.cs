@@ -17,6 +17,8 @@ namespace LeapList.Models
         public decimal? MinPrice { get; set; }
         public decimal? MaxPrice { get; set; }
 
-        public virtual ICollection<Profile> Profiles { get; set; }
+        [ForeignKey("ProfileId")]
+        public virtual Profile Profile { get; set; }
+        public virtual ICollection<CLItem> CLItems { get; set; }
     }
 }

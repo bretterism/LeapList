@@ -15,5 +15,7 @@ namespace LeapList.Models
 
         // TODO: Uername/Password authentication.
         public string Username { get; set; }
+
+        public virtual ICollection<SearchCriteria> SearchCriteria { get; set; }
     }
 }

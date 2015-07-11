@@ -18,6 +18,7 @@ namespace LeapList.Models
         public string Link { get; set; }
         public DateTime Date { get; set; }
 
-        public virtual ICollection<CLItem> CLItems { get; set; }
+        [ForeignKey("SearchId")]
+        public virtual SearchCriteria SearchCriteria { get; set; }
     }
 }
