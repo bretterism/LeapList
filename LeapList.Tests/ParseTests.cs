@@ -3,7 +3,6 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Xml;
 using System.Collections.Generic;
 using LeapList.Models;
-using LeapList.Parse;
 
 namespace LeapList.Tests
 {

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LeapList.Models;
-using LeapList.Parse;
 using LeapList.Search;
 
 namespace LeapList.Tests

@@ -1,0 +1,19 @@
+﻿@model LeapList.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.TextBoxFor(x => x.Username)
+    </div>
+    <div>
+        @Html.PasswordFor(x => x.Password)
+    </div>
+    
+    <input type="submit" value="Sign In"/>
+}

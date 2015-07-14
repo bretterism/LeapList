@@ -4,5 +4,26 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Hello, @ViewBag.User</h2>
 
+
+<h3>Searches:</h3>
+<table>
+    <thead>
+        <tr>
+            <td>Search</td>
+            <td>Min Price</td>
+            <td>Max Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sc in Model)
+        {
+            <tr>
+                <td>@sc.SearchText</td>
+                <td>@sc.MinPrice</td>
+                <td>@sc.MaxPrice</td>
+            </tr>
+        }
+    </tbody>
+</table>
