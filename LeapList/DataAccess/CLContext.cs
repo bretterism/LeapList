@@ -19,4 +19,21 @@ namespace LeapList.DataAccess
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
     }
+
+    public static class Transactions
+    {
+        public static void AddEntry(this CLContext db, SearchCriteria sc)
+        {
+            db.SearchCriteria.Add(sc);
+            db.SaveChanges();
+        }
+
+        public static void DeleteEntry(this CLContext db, SearchCriteria sc)
+        {
+            db.SearchCriteria.Remove(sc);
+            db.SaveChanges();
+        }
+
+        
+    }
 }

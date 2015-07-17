@@ -1,0 +1,28 @@
+﻿@model LeapList.Models.SearchCriteria
+
+@{
+    ViewBag.Title = "AddSearch";
+}
+
+<h2>Add Search</h2>
+
+@using (Html.BeginForm("AddSearch", "Profile"))
+{
+    <div>   
+        @Html.LabelFor(x =>x.SearchText)
+        @Html.TextBoxFor(x => x.SearchText)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Category)
+        @Html.TextBoxFor(x => x.Category)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.MinPrice)
+        @Html.TextBoxFor(x => x.MinPrice)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.MaxPrice)
+        @Html.TextBoxFor(x => x.MaxPrice)
+    </div>
+    <input type="submit" value="Add Search" />
+}

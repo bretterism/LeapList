@@ -12,9 +12,17 @@ namespace LeapList.Models
         [Key]
         public int SearchId { get; set; }
         public int ProfileId { get; set; }
+        
+        [Display(Name="Category")]
         public string Category { get; set; }
+
+        [Display(Name="Search")]
         public string SearchText { get; set; }
+
+        [Display(Name="Min Price")]
         public decimal? MinPrice { get; set; }
+
+        [Display(Name = "Max Price")]
         public decimal? MaxPrice { get; set; }
 
         [ForeignKey("ProfileId")]
