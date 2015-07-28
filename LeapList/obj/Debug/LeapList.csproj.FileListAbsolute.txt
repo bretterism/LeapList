@@ -43,3 +43,5 @@ C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.SqlServer.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.SqlServer.xml
+C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.Migrations.initial.resources
+C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache

@@ -14,21 +14,29 @@ namespace LeapList.Tests
         [TestMethod]
         public void TestBuildHttp()
         {
-            SearchCriteria sc = new SearchCriteria()
+            SearchCriteria sc = new SearchCriteria
             {
-                Category = "ata",
                 MaxPrice = 30,
-                SearchText = "foobar"
+                SearchText = "foobar",
+                SearchId = 123
             };
 
-            Profile p = new Profile()
+            SearchVM svm = new SearchVM
+            {
+                Category = "ata",
+                SearchText = "foobar",
+                MaxPrice = 800,
+                MinPrice = 300
+            };
+
+            Profile p = new Profile
             {
                 City = "corvallis",
             };
 
-            string url = SearchItems.BuildHttp(sc, p);
+            string url = SearchItems.BuildHttp(svm, p);
 
-            Assert.AreEqual(@"https://corvallis.craigslist.org/search/ata?max_price=30&query=foobar&format=rss", url);
+            Assert.AreEqual(@"http://corvallis.craigslist.org/search/ata?min_price=300&max_price=800&query=foobar&format=rss", url);
         }
     }
 }

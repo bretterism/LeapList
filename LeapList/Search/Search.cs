@@ -9,18 +9,18 @@ namespace LeapList.Search
 {
     public static class SearchItems
     {
-        public static string BuildHttp(SearchCriteria sc, Profile profile)
+        public static string BuildHttp(SearchVM svm, Profile profile)
         {
             // http://stackoverflow.com/questions/20164298/net-how-to-build-a-url
 
             // Building search query.
             var query = HttpUtility.ParseQueryString(string.Empty);
-            if (sc.MinPrice.HasValue)
-                query["min_price"] = sc.MinPrice.ToString();
-            if (sc.MaxPrice.HasValue)
-                query["max_price"] = sc.MaxPrice.ToString();
-            if (sc.SearchText != null)
-                query["query"] = sc.SearchText;
+            if (svm.MinPrice.HasValue)
+                query["min_price"] = svm.MinPrice.ToString();
+            if (svm.MaxPrice.HasValue)
+                query["max_price"] = svm.MaxPrice.ToString();
+            if (svm.SearchText != null)
+                query["query"] = svm.SearchText;
 
             // TODO: Add more query options. Make them all nullable.
             query["format"] = "rss";
@@ -32,7 +32,7 @@ namespace LeapList.Search
 
             // When there is no category specified, we search all.
             // Category all = "sss"
-            url.Path = (sc.Category != null ? "search/" + sc.Category : "search/sss");
+            url.Path = (svm.Category != null ? "search/" + svm.Category : "search/sss");
             url.Query = query.ToString();
            
             return url.ToString();

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<LeapList.Models.SearchCriteria>
+﻿@model List<LeapList.Models.SearchVM>
 
 @{
     ViewBag.Title = "Index";
@@ -17,17 +17,17 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (var sc in Model)
+        @foreach (var svm in Model)
         {
             <tr>
-                <td>@sc.SearchText</td>
-                <td>@sc.MinPrice</td>
-                <td>@sc.MaxPrice</td>
+                <td>@svm.SearchText</td>
+                <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
+                <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
                 <td>
                     @using (Html.BeginForm())
                     {
                         @Html.AntiForgeryToken()
-                        @Html.ActionLink("Delete", "DeleteSearch", new { id = sc.SearchId })
+                        @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
                     }
                 </td>
             </tr>

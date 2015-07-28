@@ -1,15 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Data.Entity;
-using LeapList.Models;
-
-namespace LeapList.DataAccess
+namespace LeapList.Migrations
 {
-    public class CLInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<CLContext>
+    using LeapList.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<LeapList.DataAccess.CLContext>
     {
-        protected override void Seed(CLContext context)
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = false;
+        }
+
+        protected override void Seed(LeapList.DataAccess.CLContext context)
         {
             var profile = new List<Profile>
             {
@@ -18,7 +23,7 @@ namespace LeapList.DataAccess
                 new Profile {ProfileId = 3, City = "Portland", Username = "devin"}
             };
 
-            profile.ForEach(s => context.Profiles.Add(s));
+            profile.ForEach(s => context.Profiles.AddOrUpdate(s));
 
             var searchCriteria = new List<SearchCriteria>
             {
@@ -30,7 +35,7 @@ namespace LeapList.DataAccess
                 new SearchCriteria {SearchId = 6, ProfileId = 3, MinPrice = 75, SearchText = "bookshelf"}
             };
 
-            searchCriteria.ForEach(s => context.SearchCriteria.Add(s));
+            searchCriteria.ForEach(s => context.SearchCriteria.AddOrUpdate(s));
 
             var cLItem = new List<CLItem>
             {
@@ -44,7 +49,7 @@ namespace LeapList.DataAccess
                 new CLItem {ItemId = 8, SearchId = 6, Title = "dark walnut bookshelf", Price = 150, Date = DateTime.Parse("7/10/2015 03:15:12 PM")},
             };
 
-            cLItem.ForEach(s => context.CLItems.Add(s));
+            cLItem.ForEach(s => context.CLItems.AddOrUpdate(s));
 
             var sc_category = new List<SC_Category>
             {
@@ -62,19 +67,7 @@ namespace LeapList.DataAccess
                 new SC_Category {CategoryId = 12, SearchId = 6, Category = "gms"}
             };
 
-            sc_category.ForEach(s => context.SC_Categories.Add(s));
-
-            context.SaveChanges();
-        }
-
-        public class SeedOnlyInitializer : IDatabaseInitializer<CLContext>
-        {
-
-            public void InitializeDatabase(CLContext context)
-            {
-                
-                context.SaveChanges();
-            }
+            sc_category.ForEach(s => context.SC_Categories.AddOrUpdate(s));
         }
     }
 }

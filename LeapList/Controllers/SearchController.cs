@@ -33,8 +33,15 @@ namespace LeapList.Controllers
             {
                 City = "corvallis"
             };
-       
-            doc.Load(SearchItems.BuildHttp(sc, profile));
+            SearchVM svm = new SearchVM
+            {
+                //Category = sc.SC_Categories.ToString(), // << THIS IS WRONG.
+                SearchText = sc.SearchText,
+                MinPrice = sc.MinPrice,
+                MaxPrice = sc.MaxPrice
+            };
+
+            doc.Load(SearchItems.BuildHttp(svm, profile));
 
             return View("Result", doc.GetItemList());
         }

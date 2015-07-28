@@ -1,4 +1,4 @@
-﻿@model LeapList.Models.SearchCriteria
+﻿@model LeapList.Models.SearchVM
 
 @{
     ViewBag.Title = "AddSearch";
@@ -11,6 +11,14 @@
     <div>   
         @Html.LabelFor(x =>x.SearchText)
         @Html.TextBoxFor(x => x.SearchText)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Category)
+        @Html.TextBoxFor(x => x.Category)
+    </div>
+    <div>
+        @Html.LabelFor(x => x.Category)
+        @Html.TextBoxFor(x => x.Category)
     </div>
     <div>
         @Html.LabelFor(x => x.Category)

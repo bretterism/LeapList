@@ -13,9 +13,6 @@ namespace LeapList.Models
         public int SearchId { get; set; }
         public int ProfileId { get; set; }
         
-        [Display(Name="Category")]
-        public string Category { get; set; }
-
         [Display(Name="Search")]
         public string SearchText { get; set; }
 
@@ -27,6 +24,9 @@ namespace LeapList.Models
 
         [ForeignKey("ProfileId")]
         public virtual Profile Profile { get; set; }
+        
         public virtual ICollection<CLItem> CLItems { get; set; }
+        
+        public virtual ICollection<SC_Category> SC_Categories { get; set; }
     }
 }

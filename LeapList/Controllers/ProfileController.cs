@@ -22,10 +22,10 @@ namespace LeapList.Controllers
             var profileData = Session["UserProfile"] as UserProfileSessionData;
             
             ViewBag.User = profileData.Username;
+            List<SearchVM> searches = Procedures.GetSearchVMByProfileId(profileData.ProfileId);
 
-            return View(db.SearchCriteria
-                .Where(x => x.ProfileId == profileData.ProfileId)
-                .ToList()); 
+
+            return View(searches.GroupBy(g => g.SearchId).Select(s => s.First()).ToList());
         }
 
         [HttpGet]
@@ -35,18 +35,31 @@ namespace LeapList.Controllers
         }
 
         [HttpPost]
-        public ActionResult AddSearch(
-            [Bind(Include="Category, SearchText, MinPrice, MaxPrice")] 
-            SearchCriteria sc)
+        public ActionResult AddSearch(SearchVM svm)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
                     var profileData = Session["UserProfile"] as UserProfileSessionData;
-                    sc.ProfileId = profileData.ProfileId;
+                    
+                    SearchCriteria sc = new SearchCriteria
+                    {
+                        ProfileId = profileData.ProfileId,
+                        SearchText = svm.SearchText,
+                        MinPrice = svm.MinPrice,
+                        MaxPrice = svm.MaxPrice,
+                    };
 
                     db.AddEntry(sc);
+                    
+                    List<SC_Category> scc = new List<SC_Category>();
+                    foreach (string c in svm.Category)
+                    {
+                        scc.Add(new SC_Category { SearchId = sc.SearchId, Category = c });
+                    }
+
+                    db.AddEntries(scc);
                 }
             }
             catch (RetryLimitExceededException)
