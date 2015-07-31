@@ -126,9 +126,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="DataAccess\CLContext.cs" />
-    <Compile Include="DataAccess\CLInitializer.cs" />
     <Compile Include="DataAccess\Data.cs" />
     <Compile Include="DataAccess\Procedures.cs" />
     <Compile Include="Global.asax.cs">
