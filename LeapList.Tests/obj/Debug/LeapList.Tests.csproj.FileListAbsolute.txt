@@ -51,3 +51,30 @@ C:\Users\Brem Ham\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.
 C:\Users\Brem Ham\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.pdb
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\EntityFramework.dll
 C:\Users\Brem Ham\Documents\LeapList\LeapList.Tests\bin\Debug\EntityFramework.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\LeapList.Tests.dll.config
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\LeapList.Tests.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\LeapList.Tests.pdb
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\LeapList.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\Moq.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\EntityFramework.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\LeapList.pdb
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\Moq.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\bin\Debug\EntityFramework.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.csprojResolveAssemblyReference.cache
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.Properties.Resources.resources
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.csproj.GenerateResource.Cache
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList.Tests\obj\Debug\LeapList.Tests.pdb

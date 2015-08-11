@@ -1,4 +1,4 @@
-﻿@model LeapList.Models.SearchVM
+﻿@model LeapList.Models.AddSearchVM
 
 @{
     ViewBag.Title = "AddSearch";
@@ -13,24 +13,21 @@
         @Html.TextBoxFor(x => x.SearchText)
     </div>
     <div>
-        @Html.LabelFor(x => x.Category)
-        @Html.TextBoxFor(x => x.Category)
-    </div>
-    <div>
-        @Html.LabelFor(x => x.Category)
-        @Html.TextBoxFor(x => x.Category)
-    </div>
-    <div>
-        @Html.LabelFor(x => x.Category)
-        @Html.TextBoxFor(x => x.Category)
-    </div>
-    <div>
         @Html.LabelFor(x => x.MinPrice)
         @Html.TextBoxFor(x => x.MinPrice)
     </div>
     <div>
         @Html.LabelFor(x => x.MaxPrice)
         @Html.TextBoxFor(x => x.MaxPrice)
+    </div>
+    <div>
+        @*@for (int i = 0; i < Model.Categories.Count; i++)
+        {
+            Html.HiddenFor(h => h.Categories[i].Code);
+            Html.HiddenFor(h => h.Categories[i].Name);
+        }*@
+        @Html.EditorFor(e => e.Categories)
+        
     </div>
     <input type="submit" value="Add Search" />
 }

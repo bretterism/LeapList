@@ -31,11 +31,13 @@ namespace LeapList.Controllers
         [HttpGet]
         public ActionResult AddSearch()
         {
-            return View();
+            AddSearchVM vm = new AddSearchVM();
+            vm.Categories = GetCategories();
+            return View(vm);
         }
 
         [HttpPost]
-        public ActionResult AddSearch(SearchVM svm)
+        public ActionResult AddSearch(AddSearchVM vm)
         {
             try
             {
@@ -46,17 +48,17 @@ namespace LeapList.Controllers
                     SearchCriteria sc = new SearchCriteria
                     {
                         ProfileId = profileData.ProfileId,
-                        SearchText = svm.SearchText,
-                        MinPrice = svm.MinPrice,
-                        MaxPrice = svm.MaxPrice,
+                        SearchText = vm.SearchText,
+                        MinPrice = vm.MinPrice,
+                        MaxPrice = vm.MaxPrice,
                     };
 
                     db.AddEntry(sc);
                     
                     List<SC_Category> scc = new List<SC_Category>();
-                    foreach (string c in svm.Category)
+                    foreach (CheckBoxCategoryVM c in vm.Categories.Where(w => w.IsChecked))
                     {
-                        scc.Add(new SC_Category { SearchId = sc.SearchId, Category = c });
+                        scc.Add(new SC_Category { SearchId = sc.SearchId, Category = c.Code });
                     }
 
                     db.AddEntries(scc);
@@ -94,5 +96,38 @@ namespace LeapList.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public static List<CheckBoxCategoryVM> GetCategories()
+        {
+            List<CheckBoxCategoryVM> categories = new List<CheckBoxCategoryVM>();
+            foreach (CheckBoxCategoryVM cat in TestCatList())
+            {
+                categories.Add(new CheckBoxCategoryVM
+                {
+                    Code = cat.Code,
+                    Name = cat.Name,
+                    IsChecked = false
+                });
+            }
+            return categories;
+        }
+
+        public void UpdateCategories(string[] selectedCategories, AddSearchVM vm)
+        {
+
+        }
+
+        // DELETE ME!!!!
+        // TEST DATAAAAA
+        private static List<CheckBoxCategoryVM> TestCatList()
+        {
+            return new List<CheckBoxCategoryVM>()
+            {
+                new CheckBoxCategoryVM { Code = "ata", Name = "antiques" },
+                new CheckBoxCategoryVM { Code = "fua", Name = "furniture" },
+                new CheckBoxCategoryVM { Code = "rva", Name = "Rvs/Camping" }
+            };
+        }
+        
     }
 }

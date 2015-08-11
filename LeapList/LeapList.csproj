@@ -137,6 +137,7 @@
       <DependentUpon>201507220157343_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AddSearchVM.cs" />
     <Compile Include="Models\CLItem.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Profile.cs" />
@@ -156,6 +157,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Profile\AddSearch.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\CheckBoxCategoryVM.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

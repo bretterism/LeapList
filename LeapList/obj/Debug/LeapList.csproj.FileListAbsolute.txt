@@ -45,3 +45,29 @@ C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\bin\EntityFramework.SqlServer.xml
 C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.Migrations.initial.resources
 C:\Users\Brem Ham\Documents\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.dll.config
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.pdb
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\EntityFramework.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\EntityFramework.SqlServer.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Moq.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.Helpers.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.Mvc.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.Razor.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Deployment.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Razor.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\EntityFramework.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\EntityFramework.SqlServer.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Moq.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.Helpers.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.Mvc.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.Razor.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Deployment.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Razor.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csprojResolveAssemblyReference.cache
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.Migrations.initial.resources
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.pdb
