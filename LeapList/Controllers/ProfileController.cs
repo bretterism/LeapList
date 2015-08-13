@@ -100,12 +100,13 @@ namespace LeapList.Controllers
         public static List<CheckBoxCategoryVM> GetCategories()
         {
             List<CheckBoxCategoryVM> categories = new List<CheckBoxCategoryVM>();
-            foreach (CheckBoxCategoryVM cat in TestCatList())
+
+            foreach (KeyValuePair<string, string> d in DictCategory.GetCategories())
             {
                 categories.Add(new CheckBoxCategoryVM
                 {
-                    Code = cat.Code,
-                    Name = cat.Name,
+                    Code = d.Key,
+                    Name = d.Value,
                     IsChecked = false
                 });
             }
@@ -116,18 +117,5 @@ namespace LeapList.Controllers
         {
 
         }
-
-        // DELETE ME!!!!
-        // TEST DATAAAAA
-        private static List<CheckBoxCategoryVM> TestCatList()
-        {
-            return new List<CheckBoxCategoryVM>()
-            {
-                new CheckBoxCategoryVM { Code = "ata", Name = "antiques" },
-                new CheckBoxCategoryVM { Code = "fua", Name = "furniture" },
-                new CheckBoxCategoryVM { Code = "rva", Name = "Rvs/Camping" }
-            };
-        }
-        
     }
 }

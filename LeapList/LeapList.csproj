@@ -139,6 +139,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AddSearchVM.cs" />
     <Compile Include="Models\CLItem.cs" />
+    <Compile Include="Models\DictCategory.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\SC_Category.cs" />
