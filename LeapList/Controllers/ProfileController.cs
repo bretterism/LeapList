@@ -107,7 +107,6 @@ namespace LeapList.Controllers
                 {
                     Code = d.Key,
                     Name = d.Value,
-                    IsChecked = false
                 });
             }
             return categories;

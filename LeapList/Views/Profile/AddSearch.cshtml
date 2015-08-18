@@ -21,13 +21,15 @@
         @Html.TextBoxFor(x => x.MaxPrice)
     </div>
     <div>
-        @*@for (int i = 0; i < Model.Categories.Count; i++)
+        @for (int i = 0; i < Model.Categories.Count; i++)
         {
-            Html.HiddenFor(h => h.Categories[i].Code);
-            Html.HiddenFor(h => h.Categories[i].Name);
-        }*@
-        @Html.EditorFor(e => e.Categories)
-        
+            <div>
+                @Html.CheckBoxFor(m => m.Categories[i].IsChecked, new { id = @Model.Categories[i].Code })
+                @Html.HiddenFor(m => m.Categories[i].Code)
+                @Html.HiddenFor(m => m.Categories[i].Name)
+                @Html.Label(@Model.Categories[i].Name)
+            </div>
+        }
     </div>
     <input type="submit" value="Add Search" />
 }
