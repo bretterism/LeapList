@@ -24,23 +24,31 @@ namespace LeapList.Controllers
         }
 
         [HttpPost]
-        public RedirectToRouteResult Login(string username)
+        public RedirectToRouteResult Login(Login user)
         {
             if (ModelState.IsValid)
             {
-                Profile profile = db.Profiles.Where(x => x.Username == username).FirstOrDefault();
-
-                var profileData = new UserProfileSessionData
+                if (Authentication.ValidateUser(user.Username, user.Password))
                 {
-                    ProfileId = profile.ProfileId,
-                    City = profile.City,
-                    Username = profile.Username
-                };
+                    Profile profile = db.Profiles.Where(x => x.Username == user.Username).FirstOrDefault();
 
-                this.Session["UserProfile"] = profileData;
+                    var profileData = new UserProfileSessionData
+                    {
+                        ProfileId = profile.ProfileId,
+                        City = profile.City,
+                        Username = profile.Username
+                    };
+
+                    this.Session["UserProfile"] = profileData;
+                    return RedirectToAction("Index", "Profile");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "The Username and Password were incorrect.");
+                }
             }
+            return RedirectToAction("Login");
 
-            return RedirectToAction("Index", "Profile");
         }
     }
 }

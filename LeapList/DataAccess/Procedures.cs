@@ -39,5 +39,34 @@ namespace LeapList.DataAccess
 
             return vm;
         }
+
+        public static UsernamePassword GetUsernameAndPasswordHash(string usernameEntered)
+        {
+            using (var data = new DataAccess())
+            {
+                data.ProcedureName = "uspGetUsernameAndPasswordHash";
+                data.AddParm("@username", SqlDbType.VarChar, usernameEntered);
+
+                DataTable results = data.ExecReturnDataTable();
+                if (results == null)
+                {
+                    throw new Exception(string.Format("No profile found for user {0}.", usernameEntered));
+                }
+                if (results.Rows.Count > 1)
+                {
+                    throw new Exception(string.Format("Duplicate profile found for user {0}.", usernameEntered));
+                }
+
+
+                UsernamePassword user = new UsernamePassword();
+                foreach (DataRow row in results.Rows)
+                {
+                    user.Username = row["Username"].ToString();
+                    user.PasswordHash = row["PasswordHash"].ToString();
+                }
+
+                return user;
+            }
+        }
     }
 }

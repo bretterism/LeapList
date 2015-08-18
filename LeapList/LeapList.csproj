@@ -126,6 +126,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="DataAccess\Authentication.cs" />
     <Compile Include="DataAccess\CLContext.cs" />
     <Compile Include="DataAccess\Data.cs" />
     <Compile Include="DataAccess\Procedures.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Models\SC_Category.cs" />
     <Compile Include="Models\SearchCriteria.cs" />
     <Compile Include="Models\SearchVM.cs" />
+    <Compile Include="Models\UsernamePassword.cs" />
     <Compile Include="Models\UserProfileSessionData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Search.cs" />

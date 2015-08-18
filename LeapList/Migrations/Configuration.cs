@@ -1,5 +1,6 @@
 namespace LeapList.Migrations
 {
+    using LeapList.DataAccess;
     using LeapList.Models;
     using System;
     using System.Collections.Generic;
@@ -11,16 +12,16 @@ namespace LeapList.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(LeapList.DataAccess.CLContext context)
         {
             var profile = new List<Profile>
             {
-                new Profile {ProfileId = 1, City = "Corvallis", Username = "brett"},
-                new Profile {ProfileId = 2, City = "Eugene", Username = "mom"},
-                new Profile {ProfileId = 3, City = "Portland", Username = "devin"}
+                new Profile {ProfileId = 1, City = "Corvallis", Username = "brett", PasswordHash = Authentication.GetHash("abc123")},
+                new Profile {ProfileId = 2, City = "Eugene", Username = "mom", PasswordHash = Authentication.GetHash("abc123")},
+                new Profile {ProfileId = 3, City = "Portland", Username = "devin", PasswordHash = Authentication.GetHash("abc123")}
             };
 
             profile.ForEach(s => context.Profiles.AddOrUpdate(s));

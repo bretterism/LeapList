@@ -29,6 +29,7 @@ namespace LeapList.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public ActionResult AddSearch()
         {
             AddSearchVM vm = new AddSearchVM();
