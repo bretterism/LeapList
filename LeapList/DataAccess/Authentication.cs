@@ -6,6 +6,10 @@ using System.Text;
 using System.Web;
 using LeapList.DataAccess;
 using LeapList.Models;
+using System.Web.Security;
+using System.Web.Script.Serialization;
+using System.Web.Mvc;
+using LeapList.Models;
 
 namespace LeapList.DataAccess
 {
@@ -27,7 +31,34 @@ namespace LeapList.DataAccess
                 return true;
             }
             return false;
-            
+        }
+    }
+
+    public static class AuthCookies
+    {
+        public static int SetAuthCookie<T>(this HttpResponseBase response, string name, bool rememberMe, T userData)
+        {
+            HttpCookie cookie = FormsAuthentication.GetAuthCookie(name, rememberMe);
+            var ticket = FormsAuthentication.Decrypt(cookie.Value);
+
+            JavaScriptSerializer serial = new JavaScriptSerializer();
+            var newTicket = new FormsAuthenticationTicket(
+                ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration,
+                ticket.IsPersistent, serial.Serialize(userData), ticket.CookiePath);
+
+            var encryptTicket = FormsAuthentication.Encrypt(newTicket);
+
+            cookie.Value = encryptTicket;
+            response.Cookies.Add(cookie);
+
+            return encryptTicket.Length;
+        }
+
+        public static T DeserializeCookie<T>(HttpCookie cookie)
+        {
+            JavaScriptSerializer serial = new JavaScriptSerializer();
+            var decryptTicket = FormsAuthentication.Decrypt(cookie.Value);
+            return serial.Deserialize<T>(decryptTicket.UserData);
         }
     }
 }

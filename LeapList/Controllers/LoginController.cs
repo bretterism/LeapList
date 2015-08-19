@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using LeapList.Models;
 using LeapList.DataAccess;
+using System.Web.Security;
 
 namespace LeapList.Controllers
 {
@@ -38,6 +39,11 @@ namespace LeapList.Controllers
                         City = profile.City,
                         Username = profile.Username
                     };
+
+                    Response.SetAuthCookie(user.Username, user.RememberMe, profileData);
+
+                    //UserProfileSessionData data = 
+                    //    AuthCookies.DeserializeCookie<UserProfileSessionData>(Response.Cookies["authenticationToken"]);
 
                     this.Session["UserProfile"] = profileData;
                     return RedirectToAction("Index", "Profile");

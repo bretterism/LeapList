@@ -9,10 +9,13 @@
 @using (Html.BeginForm())
 {
     <div>
-        @Html.TextBoxFor(x => x.Username)
+        @Html.TextBoxFor(x => x.Username, new { @placeholder = "Username" })
     </div>
     <div>
-        @Html.PasswordFor(x => x.Password)
+        @Html.PasswordFor(x => x.Password, new { @placeholder = "Password" })
+    </div>
+    <div>
+        @Html.CheckBoxFor(x => x.RememberMe) Remember Me?
     </div>
     
     <input type="submit" value="Sign In"/>
