@@ -15,12 +15,13 @@ namespace LeapList.Controllers
     public class ProfileController : Controller
     {
         private CLContext db = new CLContext();
+        private UserProfileSessionData profileData;
 
         // GET: Profile
         public ActionResult Index()
         {
-            var profileData = Session["UserProfile"] as UserProfileSessionData;
-            
+            profileData = AuthCookies.DeserializeCookie<UserProfileSessionData>(HttpContext.Request.Cookies["authenticationToken"]);
+
             ViewBag.User = profileData.Username;
             List<SearchVM> searches = Procedures.GetSearchVMByProfileId(profileData.ProfileId);
 
@@ -44,8 +45,6 @@ namespace LeapList.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var profileData = Session["UserProfile"] as UserProfileSessionData;
-                    
                     SearchCriteria sc = new SearchCriteria
                     {
                         ProfileId = profileData.ProfileId,

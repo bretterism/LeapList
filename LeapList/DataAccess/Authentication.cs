@@ -9,7 +9,6 @@ using LeapList.Models;
 using System.Web.Security;
 using System.Web.Script.Serialization;
 using System.Web.Mvc;
-using LeapList.Models;
 
 namespace LeapList.DataAccess
 {

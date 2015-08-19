@@ -42,10 +42,6 @@ namespace LeapList.Controllers
 
                     Response.SetAuthCookie(user.Username, user.RememberMe, profileData);
 
-                    //UserProfileSessionData data = 
-                    //    AuthCookies.DeserializeCookie<UserProfileSessionData>(Response.Cookies["authenticationToken"]);
-
-                    this.Session["UserProfile"] = profileData;
                     return RedirectToAction("Index", "Profile");
                 }
                 else
