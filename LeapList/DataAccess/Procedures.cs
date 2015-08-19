@@ -68,5 +68,24 @@ namespace LeapList.DataAccess
                 return user;
             }
         }
+
+        public static bool CheckIfUserExists(string username)
+        {
+            using (var data = new DataAccess())
+            {
+                data.ProcedureName = "uspCheckIfUserExists";
+                data.AddParm("@username", SqlDbType.VarChar, username);
+
+                DataTable results = data.ExecReturnDataTable();
+                foreach (DataRow row in results.Rows)
+                {
+                    if (row["UserCheck"].Equals((int)0))
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+        }
     }
 }

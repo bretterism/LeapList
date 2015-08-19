@@ -142,6 +142,7 @@
     <Compile Include="Models\CLItem.cs" />
     <Compile Include="Models\DictCategory.cs" />
     <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\NewUserVM.cs" />
     <Compile Include="Models\Profile.cs" />
     <Compile Include="Models\SC_Category.cs" />
     <Compile Include="Models\SearchCriteria.cs" />
@@ -160,6 +161,7 @@
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Profile\AddSearch.cshtml" />
+    <Content Include="Views\Login\NewUser.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -41,6 +41,7 @@ namespace LeapList.Controllers
         [HttpPost]
         public ActionResult AddSearch(AddSearchVM vm)
         {
+            profileData = AuthCookies.DeserializeCookie<UserProfileSessionData>(HttpContext.Request.Cookies["authenticationToken"]);
             try
             {
                 if (ModelState.IsValid)

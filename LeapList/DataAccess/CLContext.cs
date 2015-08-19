@@ -26,6 +26,11 @@ namespace LeapList.DataAccess
 
     public static class Transactions
     {
+        public static void AddEntry(this CLContext db, Profile profile)
+        {
+            db.Profiles.Add(profile);
+            db.SaveChanges();
+        }
         public static void AddEntry(this CLContext db, SearchCriteria sc)
         {
             db.SearchCriteria.Add(sc);

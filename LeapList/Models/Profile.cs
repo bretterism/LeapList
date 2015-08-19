@@ -18,12 +18,17 @@ namespace LeapList.Models
             Username = username;
             PasswordHash = Authentication.GetHash(plainTextPassword);
         }
+        public Profile(string username, string plainTextPassword, string city)
+        {
+            Username = username;
+            PasswordHash = Authentication.GetHash(plainTextPassword);
+            City = city;
+        }
 
         [Key]
         public int ProfileId { get; set; }
         public string City { get; set; }
 
-        // TODO: Uername/Password authentication.
         public string Username { get; set; }
         public string PasswordHash { get; set; }
 
