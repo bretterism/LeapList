@@ -17,10 +17,18 @@ namespace LeapList.Controllers
         [AllowAnonymous]
         public ActionResult Login()
         {
-            return View();
+            if (!Request.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Index", "Profile");
+            }
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public RedirectToRouteResult Login(Login user)
         {
             if (ModelState.IsValid)
@@ -57,6 +65,7 @@ namespace LeapList.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult NewUser(NewUserVM vm)
         {
             if (ModelState.IsValid)

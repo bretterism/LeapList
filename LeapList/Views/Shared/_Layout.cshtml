@@ -6,6 +6,14 @@
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    @if(Request.IsAuthenticated)
+    {
+        <div>@Html.ActionLink("Sign Out", "SignOut", "Profile")</div>
+    }
+    else
+    {
+        <div>@Html.ActionLink("Log In", "Login", "Login")</div>
+    }
     @RenderBody()
 </body>
 </html>

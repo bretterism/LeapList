@@ -9,9 +9,11 @@ using System.Web.Mvc;
 using LeapList.DataAccess;
 using LeapList.Models;
 using System.Data.Entity.Infrastructure;
+using System.Web.Security;
 
 namespace LeapList.Controllers
 {
+    [Authorize]
     public class ProfileController : Controller
     {
         private CLContext db = new CLContext();
@@ -30,7 +32,6 @@ namespace LeapList.Controllers
         }
 
         [HttpGet]
-        [Authorize]
         public ActionResult AddSearch()
         {
             AddSearchVM vm = new AddSearchVM();
@@ -96,6 +97,12 @@ namespace LeapList.Controllers
             }
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Login");
         }
 
         public static List<CheckBoxCategoryVM> GetCategories()

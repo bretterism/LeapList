@@ -6,7 +6,6 @@
 
 <h2>NewUser</h2>
 
-@Html.AntiForgeryToken()
 
 <div>
     @Html.ValidationMessage("UserExists")
@@ -14,6 +13,8 @@
 
 @using (Html.BeginForm())
 {
+    @Html.AntiForgeryToken()
+    
     <div>
         @Html.LabelFor(m => m.Username)
         @Html.TextBoxFor(m => m.Username)
