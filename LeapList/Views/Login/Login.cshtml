@@ -8,21 +8,33 @@
 
 <h2>Login</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(new { @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
 
-    <div>
-        @Html.TextBoxFor(x => x.Username, new { @placeholder = "Username" })
+    <div class="form-group">
+        @Html.LabelFor(x => x.Username, new { @class = "control-label col-sm-2" })
+        <div class="col-sm-12">
+            @Html.TextBoxFor(x => x.Username, new { @placeholder = "Username", @class = "form-control" })
+        </div>
     </div>
-    <div>
-        @Html.PasswordFor(x => x.Password, new { @placeholder = "Password" })
+    <div class="form-group">
+        @Html.LabelFor(x => x.Password, new { @class = "control-label col-sm-2" })
+        <div class="col-sm-12">
+            @Html.PasswordFor(x => x.Password, new { @placeholder = "Password", @class = "form-control" })
+        </div>
     </div>
-    <div>
-        @Html.CheckBoxFor(x => x.RememberMe) Remember Me?
+    <div class="form-group">
+        <div class="checkbox">
+            <label class="col-sm-offset-2 col-sm-10">
+                @Html.CheckBoxFor(x => x.RememberMe) Remember me?
+            </label>
+        </div>
     </div>
-    
-    <input type="submit" value="Sign In"/>
+
+    <div class="col-sm-offset-2 col-sm-10">
+        <input type="submit" value="Sign In" class="btn btn-default" />
+    </div>
 }
 
 @Html.ActionLink("Register", "NewUser")
