@@ -11,35 +11,35 @@
     @Html.ValidationMessage("UserExists")
 </div>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm(new { @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
-    
-    <div>
-        @Html.LabelFor(m => m.Username)
-        @Html.TextBoxFor(m => m.Username)
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Username, new { @class = "control-label col-xs-2"})
+        @Html.TextBoxFor(m => m.Username, new { @placeholder = "enter username" })
         @Html.ValidationMessageFor(m => m.Username)
     </div>
-    <div>
-        @Html.LabelFor(m => m.City)
-        @Html.TextBoxFor(m => m.City)
+    <div class="form-group">
+        @Html.LabelFor(m => m.City, new { @class = "control-label col-xs-2" })
+        @Html.TextBoxFor(m => m.City, new { @placeholder = "enter city" })
         @Html.ValidationMessageFor(m => m.City)
     </div>
-    <div>
-        @Html.LabelFor(m => m.Email)
-        @Html.TextBoxFor(m => m.Email)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Email, new { @class = "control-label col-xs-2" })
+        @Html.TextBoxFor(m => m.Email, new { @placeholder = "enter e-mail" })
         @Html.ValidationMessageFor(m => m.Email)
     </div>
-    <div>
-        @Html.LabelFor(m => m.Password)
-        @Html.PasswordFor(m => m.Password)
+    <div class="form-group">
+        @Html.LabelFor(m => m.Password, new { @class = "control-label col-xs-2" })
+        @Html.TextBoxFor(m => m.Password, new { @placeholder = "enter password" })
         @Html.ValidationMessageFor(m => m.Password)
     </div>
-    <div>
-        @Html.LabelFor(m => m.ConfirmPassword)
-        @Html.PasswordFor(m => m.ConfirmPassword)
+    <div class="form-group">
+        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "control-label col-xs-2" })
+        @Html.TextBoxFor(m => m.ConfirmPassword, new { @placeholder = "confirm password" })
         @Html.ValidationMessageFor(m => m.ConfirmPassword)
     </div>
-    
-    <input type="submit" value="Register" />
+
+    <input type="submit" value="Register" class="btn btn-default" />
 }

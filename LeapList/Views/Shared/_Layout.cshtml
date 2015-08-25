@@ -3,17 +3,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <script src="~/Scripts/bootstrap.js"></script>
     <title>@ViewBag.Title</title>
 </head>
 <body>
-    @if(Request.IsAuthenticated)
-    {
-        <div>@Html.ActionLink("Sign Out", "SignOut", "Profile")</div>
-    }
-    else
-    {
-        <div>@Html.ActionLink("Log In", "Login", "Login")</div>
-    }
-    @RenderBody()
+    <div class="container">
+        @if(Request.IsAuthenticated)
+        {
+            @Html.ActionLink("Sign Out", "SignOut", "Profile", new { @class = "btn btn-default"})
+        }
+        else
+        {
+            @Html.ActionLink("Log In", "Login", "Login", new { @class = "btn btn-default"})
+        }
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
 </body>
 </html>
