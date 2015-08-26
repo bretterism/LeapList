@@ -9,7 +9,6 @@ namespace LeapList.Models
     public class Login
     {
         [Required]
-        [Display(Name = "User Name")]
         public string Username { get; set; }
 
         [Required]
