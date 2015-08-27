@@ -7,31 +7,38 @@
 <h2>Hello, @ViewBag.User</h2>
 
 
-<h3>Searches:</h3>
-<table>
-    <thead>
-        <tr>
-            <td>Search</td>
-            <td>Min Price</td>
-            <td>Max Price</td>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var svm in Model)
-        {
-            <tr>
-                <td>@svm.SearchText</td>
-                <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
-                <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
-                <td>
-                    @using (Html.BeginForm())
-                    {
-                        @Html.AntiForgeryToken()
-                        @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
-                    }
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
-<a href="~/Profile/AddSearch" />Add Search</a>
+<h3>Searches</h3>
+
+<div class="row">
+    <div class="col-sm-8">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <td><strong>Search</strong></td>
+                    <td><strong>Min Price</strong></td>
+                    <td><strong>Max Price</strong></td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var svm in Model)
+                {
+                    <tr>
+                        <td>@svm.SearchText</td>
+                        <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
+                        <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
+                        <td>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <a href="~/Profile/AddSearch" class="btn btn-default"/>Add Search</a>
+</div>

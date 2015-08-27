@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="~/Content/bootstrap.css" />
     <link rel="stylesheet" href="~/Content/Site.css" />
     <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.js"></script>
     <title>@ViewBag.Title</title>
 </head>
 <body>
@@ -14,7 +15,7 @@
         {
             @Html.ActionLink("Sign Out", "SignOut", "Profile", new { @class = "btn btn-default"})
         }
-        else
+        else if (!Request.IsAuthenticated && ViewContext.RouteData.Values["action"] != "Login")
         {
             @Html.ActionLink("Log In", "Login", "Login", new { @class = "btn btn-default"})
         }
