@@ -119,6 +119,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\SelectCity-jquery.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -162,6 +163,7 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Profile\AddSearch.cshtml" />
     <Content Include="Views\Login\NewUser.cshtml" />
+    <Content Include="Views\Login\SelectCity.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

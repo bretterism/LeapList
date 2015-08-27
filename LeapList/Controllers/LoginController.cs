@@ -9,6 +9,7 @@ using System.Web.Security;
 
 namespace LeapList.Controllers
 {
+    [Authorize]
     public class LoginController : Controller
     {
         private CLContext db = new CLContext();
@@ -29,6 +30,7 @@ namespace LeapList.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public RedirectToRouteResult Login(Login user)
         {
             if (ModelState.IsValid)
@@ -46,7 +48,14 @@ namespace LeapList.Controllers
 
                     Response.SetAuthCookie(user.Username, user.RememberMe, profileData);
 
-                    return RedirectToAction("Index", "Profile");
+                    if (profileData.City == "N/A")
+                    {
+                        return RedirectToAction("SelectCity");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Profile");
+                    }
                 }
                 else
                 {
@@ -66,6 +75,7 @@ namespace LeapList.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [AllowAnonymous]
         public ActionResult NewUser(NewUserVM vm)
         {
             if (ModelState.IsValid)
@@ -78,15 +88,38 @@ namespace LeapList.Controllers
                     return View(vm);
                 }
 
-                Profile profile = new Profile(vm.Username, vm.Password, vm.City);
-                db.AddEntry(profile);
+                Profile profile = new Profile(vm.Username, vm.Password, "N/A");
 
+                db.AddEntry(profile);
                 CreateCookie(profile, false);
 
-                return RedirectToAction("Index", "Profile");
+                return RedirectToAction("SelectCity");
             }
             
             return View(vm);
+        }
+
+        [HttpGet]
+        public ActionResult SelectCity()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SelectCity(string city)
+        {
+            // get the cookie
+            UserProfileSessionData profileData =
+                AuthCookies.DeserializeCookie<UserProfileSessionData>(HttpContext.Request.Cookies["authenticationToken"]);
+
+            // modify the profile's city in db
+            profileData.City = city;
+            db.UpdateCityForProfile(profileData);
+
+            // overwrite cookie with new value
+            Response.SetAuthCookie(profileData);
+
+            return RedirectToAction("Index", "Profile");
         }
 
         private void CreateCookie(Profile profile, bool rememberMe)
@@ -95,7 +128,8 @@ namespace LeapList.Controllers
             {
                 ProfileId = profile.ProfileId,
                 City = profile.City,
-                Username = profile.Username
+                Username = profile.Username,
+                IsPersistent = rememberMe
             };
 
             Response.SetAuthCookie(profile.Username, rememberMe, profileData);

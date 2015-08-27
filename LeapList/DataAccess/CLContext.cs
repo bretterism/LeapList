@@ -58,5 +58,17 @@ namespace LeapList.DataAccess
             }
             db.SaveChanges();
         }
+
+        public static void UpdateCityForProfile(this CLContext db, UserProfileSessionData profileData)
+        {
+            Profile profile = db.Profiles.Find(profileData.ProfileId);
+            profile.City = profileData.City;
+
+            db.Profiles.Attach(profile);
+            var entry = db.Entry(profile);
+
+            entry.Property(e => e.City).IsModified = true;
+            db.SaveChanges();
+        }
     }
 }
