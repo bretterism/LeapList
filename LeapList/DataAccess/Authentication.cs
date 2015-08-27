@@ -53,6 +53,24 @@ namespace LeapList.DataAccess
             return encryptTicket.Length;
         }
 
+        public static int SetAuthCookie(this HttpResponseBase response, UserProfileSessionData userData)
+        {
+            HttpCookie cookie = FormsAuthentication.GetAuthCookie(userData.Username, userData.IsPersistent);
+            var ticket = FormsAuthentication.Decrypt(cookie.Value);
+
+            JavaScriptSerializer serial = new JavaScriptSerializer();
+            var newTicket = new FormsAuthenticationTicket(
+                ticket.Version, ticket.Name, ticket.IssueDate, ticket.Expiration,
+                ticket.IsPersistent, serial.Serialize(userData), ticket.CookiePath);
+
+            var encryptTicket = FormsAuthentication.Encrypt(newTicket);
+
+            cookie.Value = encryptTicket;
+            response.Cookies.Add(cookie);
+
+            return encryptTicket.Length;
+        }
+
         public static T DeserializeCookie<T>(HttpCookie cookie)
         {
             JavaScriptSerializer serial = new JavaScriptSerializer();

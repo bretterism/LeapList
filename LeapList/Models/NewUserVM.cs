@@ -27,8 +27,5 @@ namespace LeapList.Models
         [Display(Name = "Confirm Password")]
         [Compare("Password", ErrorMessage = "The password and confirmation do not match.")]
         public string ConfirmPassword { get; set; }
-
-        [Required]
-        public string City { get; set; }
     }
 }

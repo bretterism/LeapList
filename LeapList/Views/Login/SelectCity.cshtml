@@ -1,0 +1,599 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "Select City";
+}
+
+@section Jquery
+{
+    <script src="~/Scripts/SelectCity-jquery.js"></script>
+}
+
+<h1>Select Your City</h1>
+
+<h1><a name="US"></a>US</h1>
+<div class="row">
+    <div class="col-sm-3">
+        <h4>Alabama</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="auburn" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="birmingham" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="dothan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="florence / muscle shoals" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="gadsden-anniston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="huntsville / decatur" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mobile" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="montgomery" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tuscaloosa" class="btn btn-link" /></div>
+        </div>
+        <h4>Alaska</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="anchorage / mat-su" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fairbanks" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kenai peninsula" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southeast alaska" class="btn btn-link" /></div>
+        </div>
+        <h4>Arizona</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="flagstaff / sedona" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mohave county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="phoenix" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="prescott" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="show low" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sierra vista" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tucson" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="yuma" class="btn btn-link" /></div>
+        </div>
+        <h4>Arkansas</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fayetteville " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fort smith" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jonesboro" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="little rock" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="texarkana" class="btn btn-link" /></div>
+        </div>
+        <h4>California</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bakersfield" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="chico" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fresno / madera" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="gold country" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hanford-corcoran" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="humboldt county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="imperial county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="inland empire" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="los angeles" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mendocino county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="merced" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="modesto" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="monterey bay" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="orange county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="palm springs" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="redding" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sacramento" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="san diego" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="san francisco bay area" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="san luis obispo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="santa barbara" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="santa maria" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="siskiyou county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="stockton" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="susanville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ventura county" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="visalia-tulare" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="yuba-sutter" class="btn btn-link" /></div>
+        </div>
+        <h4>Colorado</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="boulder" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="colorado springs" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="denver" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern CO" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fort collins / north CO" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="high rockies" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="pueblo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="western slope" class="btn btn-link" /></div>
+        </div>
+        <h4>Connecticut</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern CT" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hartford" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="new haven" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northwest CT" class="btn btn-link" /></div>
+        </div>
+        <h4>Delaware</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="delaware" class="btn btn-link" /></div>
+        </div>
+        <h4>District of Columbia</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="washington" class="btn btn-link" /></div>
+        </div>
+        <h4>Florida</h4>
+        <div class="list-group">
+            <!-- <div class="list-group-item"><a href="http://miami.craigslist.org/brw">broward county" class="btn btn-link" /></div> -->
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="daytona beach" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="florida keys" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fort lauderdale" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ft myers / SW florida" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="gainesville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="heartland florida" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jacksonville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lakeland" class="btn btn-link" /></div>
+            <!-- <div class="list-group-item"><a href="http://miami.craigslist.org/mdc">miami / dade" class="btn btn-link" /></div> -->
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="north central FL" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ocala" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="okaloosa / walton" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="orlando" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="panama city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="pensacola" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sarasota-bradenton" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="south florida" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="space coast" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="st augustine" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tallahassee" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tampa bay area" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="treasure coast" class="btn btn-link" /></div>
+            <!-- <div class="list-group-item"><a href="http://miami.craigslist.org/pbc">palm beach county" class="btn btn-link" /></div> -->
+        </div>
+        <h4>Georgia</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="albany " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="athens" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="atlanta" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="augusta" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="brunswick" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="columbus " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="macon / warner robins" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northwest GA" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="savannah / hinesville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="statesboro" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="valdosta" class="btn btn-link" /></div>
+        </div>
+        <h4>Hawaii</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hawaii" class="btn btn-link" /></div>
+        </div>
+        <h4>Idaho</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="boise" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="east idaho" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lewiston / clarkston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="twin falls" class="btn btn-link" /></div>
+        </div>
+    </div><div class="col-sm-3">
+        <h4>Illinois</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bloomington-normal" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="champaign urbana" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="chicago" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="decatur" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="la salle co" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mattoon-charleston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="peoria" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="rockford" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southern illinois" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="springfield " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="western IL" class="btn btn-link" /></div>
+        </div>
+        <h4>Indiana</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bloomington" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="evansville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fort wayne" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="indianapolis" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kokomo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lafayette / west lafayette" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="muncie / anderson" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="richmond " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="south bend / michiana" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="terre haute" class="btn btn-link" /></div>
+        </div>
+        <h4>Iowa</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ames" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="cedar rapids" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="des moines" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="dubuque" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fort dodge" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="iowa city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mason city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="quad cities" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sioux city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southeast IA" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="waterloo / cedar falls" class="btn btn-link" /></div>
+        </div>
+        <h4>Kansas</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lawrence" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="manhattan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northwest KS" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="salina" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southeast KS" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southwest KS" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="topeka" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="wichita" class="btn btn-link" /></div>
+        </div>
+        <h4>Kentucky</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bowling green" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern kentucky" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lexington" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="louisville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="owensboro" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="western KY" class="btn btn-link" /></div>
+        </div>
+        <h4>Louisiana</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="baton rouge" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="central louisiana" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="houma" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lafayette" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lake charles" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="monroe" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="new orleans" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="shreveport" class="btn btn-link" /></div>
+        </div>
+        <h4>Maine</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="maine" class="btn btn-link" /></div>
+        </div>
+        <h4>Maryland</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="annapolis" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="baltimore" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern shore" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="frederick" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southern maryland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="western maryland" class="btn btn-link" /></div>
+        </div>
+        <h4>Massachusetts</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="boston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="cape cod / islands" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="south coast" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="western massachusetts" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="worcester / central MA" class="btn btn-link" /></div>
+        </div>
+        <h4>Michigan</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ann arbor" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="battle creek" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="central michigan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="detroit metro" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="flint" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="grand rapids" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="holland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jackson " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kalamazoo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lansing" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="monroe " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="muskegon" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northern michigan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="port huron" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="saginaw-midland-baycity" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southwest michigan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="the thumb" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="upper peninsula" class="btn btn-link" /></div>
+        </div>
+        <h4>Minnesota</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bemidji" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="brainerd" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="duluth / superior" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mankato" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="minneapolis / st paul" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="rochester " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southwest MN" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="st cloud" class="btn btn-link" /></div>
+        </div>
+        <h4>Mississippi</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="gulfport / biloxi" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hattiesburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jackson" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="meridian" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="north mississippi" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southwest MS" class="btn btn-link" /></div>
+        </div>
+        <h4>Missouri</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="columbia / jeff city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="joplin" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kansas city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kirksville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lake of the ozarks" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southeast missouri" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="springfield" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="st joseph" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="st louis" class="btn btn-link" /></div>
+        </div>
+    </div><div class="col-sm-3">
+        <h4>Montana</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="billings" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bozeman" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="butte" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="great falls" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="helena" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kalispell" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="missoula" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern montana" class="btn btn-link" /></div>
+        </div>
+        <h4>Nebraska</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="grand island" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lincoln" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="north platte" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="omaha / council bluffs" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="scottsbluff / panhandle" class="btn btn-link" /></div>
+        </div>
+        <h4>Nevada</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="elko" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="las vegas" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="reno / tahoe" class="btn btn-link" /></div>
+        </div>
+        <h4>New Hampshire</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="new hampshire" class="btn btn-link" /></div>
+        </div>
+        <h4>New Jersey</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="central NJ" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jersey shore" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="north jersey" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="south jersey" class="btn btn-link" /></div>
+        </div>
+        <h4>New Mexico</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="albuquerque" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="clovis / portales" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="farmington" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="las cruces" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="roswell / carlsbad" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="santa fe / taos" class="btn btn-link" /></div>
+        </div>
+        <h4>New York</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="albany" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="binghamton" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="buffalo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="catskills" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="chautauqua" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="elmira-corning" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="finger lakes" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="glens falls" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hudson valley" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ithaca" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="long island" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="new york city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="oneonta" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="plattsburgh-adirondacks" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="potsdam-canton-massena" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="rochester" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="syracuse" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="twin tiers NY/PA" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="utica-rome-oneida" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="watertown" class="btn btn-link" /></div>
+        </div>
+        <h4>North Carolina</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="asheville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="boone" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="charlotte" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern NC" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fayetteville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="greensboro" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hickory / lenoir" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jacksonville " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="outer banks" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="raleigh / durham / CH" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="wilmington" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="winston-salem" class="btn btn-link" /></div>
+        </div>
+        <h4>North Dakota</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bismarck" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fargo / moorhead" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="grand forks" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="north dakota" class="btn btn-link" /></div>
+        </div>
+        <h4>Ohio</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="akron / canton" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ashtabula" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="athens " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="chillicothe" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="cincinnati" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="cleveland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="columbus" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="dayton / springfield" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lima / findlay" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mansfield" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sandusky" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="toledo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tuscarawas co" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="youngstown" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="zanesville / cambridge" class="btn btn-link" /></div>
+        </div>
+        <h4>Oklahoma</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lawton" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northwest OK" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="oklahoma city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="stillwater" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tulsa" class="btn btn-link" /></div>
+        </div>
+        <h4>Oregon</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bend" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="corvallis/albany" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="east oregon" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eugene" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="klamath falls" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="medford-ashland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="oregon coast" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="portland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="roseburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="salem" class="btn btn-link" /></div>
+        </div>
+        <h4>Pennsylvania</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="altoona-johnstown" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="cumberland valley" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="erie" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="harrisburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lancaster" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lehigh valley" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="meadville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="philadelphia" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="pittsburgh" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="poconos" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="reading" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="scranton / wilkes-barre" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="state college" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="williamsport" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="york" class="btn btn-link" /></div>
+        </div>
+    </div><div class="col-sm-3">
+        <h4>Rhode Island</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="rhode island" class="btn btn-link" /></div>
+        </div>
+        <h4>South Carolina</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="charleston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="columbia" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="florence" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="greenville / upstate" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hilton head" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="myrtle beach" class="btn btn-link" /></div>
+        </div>
+        <h4>South Dakota</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northeast SD" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="pierre / central SD" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="rapid city / west SD" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sioux falls / SE SD" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="south dakota" class="btn btn-link" /></div>
+        </div>
+        <h4>Tennessee</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="chattanooga" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="clarksville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="cookeville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="jackson  " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="knoxville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="memphis" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="nashville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tri-cities" class="btn btn-link" /></div>
+        </div>
+        <h4>Texas</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="abilene" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="amarillo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="austin" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="beaumont / port arthur" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="brownsville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="college station" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="corpus christi" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="dallas / fort worth" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="deep east texas" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="del rio / eagle pass" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="el paso" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="galveston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="houston" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="killeen / temple / ft hood" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="laredo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lubbock" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="mcallen / edinburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="odessa / midland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="san angelo" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="san antonio" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="san marcos" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southwest TX" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="texoma" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="tyler / east TX" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="victoria " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="waco" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="wichita falls" class="btn btn-link" /></div>
+        </div>
+        <h4>Utah</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="logan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="ogden-clearfield" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="provo / orem" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="salt lake city" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="st george" class="btn btn-link" /></div>
+        </div>
+        <h4>Vermont</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="vermont" class="btn btn-link" /></div>
+        </div>
+        <h4>Virginia</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="charlottesville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="danville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="fredericksburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="hampton roads" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="harrisonburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="lynchburg" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="new river valley" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="richmond" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="roanoke" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southwest VA" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="winchester" class="btn btn-link" /></div>
+        </div>
+        <h4>Washington</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="bellingham" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kennewick-pasco-richland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="moses lake" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="olympic peninsula" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="pullman / moscow" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="seattle-tacoma" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="skagit / island / SJI" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="spokane / coeur d'alene" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="wenatchee" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="yakima" class="btn btn-link" /></div>
+        </div>
+        <h4>West Virginia</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="charleston " class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eastern panhandle" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="huntington-ashland" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="morgantown" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northern panhandle" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="parkersburg-marietta" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="southern WV" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="west virginia (old)" class="btn btn-link" /></div>
+        </div>
+        <h4>Wisconsin</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="appleton-oshkosh-FDL" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="eau claire" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="green bay" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="janesville" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="kenosha-racine" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="la crosse" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="madison" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="milwaukee" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="northern WI" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="sheboygan" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="wausau" class="btn btn-link" /></div>
+        </div>
+        <h4>Wyoming</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="wyoming" class="btn btn-link" /></div>
+        </div>
+
+
+        <h4>Territories</h4>
+        <div class="list-group">
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="guam-micronesia" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="puerto rico" class="btn btn-link" /></div>
+            <div class="list-group-item"><input id="SelectCityButton" type="button" value="U.S. virgin islands" class="btn btn-link" /></div>
+        </div>
+    </div>
+</div>
