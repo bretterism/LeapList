@@ -71,3 +71,6 @@ C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.Migration
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.dll
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.pdb
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Microsoft.CSharp.dll
