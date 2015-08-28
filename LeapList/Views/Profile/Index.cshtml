@@ -1,17 +1,16 @@
 ﻿@model List<LeapList.Models.SearchVM>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Profile";
 }
 
 <h2>Hello, @ViewBag.User</h2>
-
 
 <h3>Searches</h3>
 
 <div class="row">
     <div class="col-sm-8">
-        <table class="table table-hover">
+        <table id="ProfileTable" class="table table-hover">
             <thead>
                 <tr>
                     <td><strong>Search</strong></td>
@@ -22,7 +21,7 @@
             <tbody>
                 @foreach (var svm in Model)
                 {
-                    <tr>
+                    <tr id="PopoverRow" data-toggle="popover" data-trigger="focus" title="Search Details" data-content="pooooop">
                         <td>@svm.SearchText</td>
                         <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
                         <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
@@ -40,5 +39,5 @@
     </div>
 </div>
 <div class="row">
-    <a href="~/Profile/AddSearch" class="btn btn-default"/>Add Search</a>
+    <a href="~/Profile/AddSearch" class="btn btn-default" />Add Search</a>
 </div>

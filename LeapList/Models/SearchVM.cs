@@ -10,6 +10,11 @@ namespace LeapList.Models
 {
     public class SearchVM
     {
+        public SearchVM()
+        {
+            Category = new List<string>();
+        }
+
         public int SearchId { get; set; }
         public string SearchText { get; set; }
 

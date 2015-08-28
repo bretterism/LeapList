@@ -12,6 +12,8 @@ namespace LeapList.DataAccess
         public static List<SearchVM> GetSearchVMByProfileId(int profileId)
         {
             List<SearchVM> vm = new List<SearchVM>();
+            List<KeyValuePair<int, string>> categories = new List<KeyValuePair<int, string>>();
+
             using (var data = new DataAccess())
             {
                 data.ProcedureName = "uspGetSearchVMByProfileId";
@@ -29,11 +31,25 @@ namespace LeapList.DataAccess
                         MaxPrice = (!(row["MaxPrice"] is DBNull) ? Convert.ToDecimal(row["MaxPrice"]) : 0m)
                     };
 
-                    if (s.Category != null)
-                    {
-                        s.Category.Add(row["Category"].ToString());
-                    }
                     vm.Add(s);
+                    
+                    // Getting the categories for each search
+                    int idx = Convert.ToInt32(row["SearchId"]);
+                    if (row["Category"].ToString() != null)
+                    {
+                        categories.Add(new KeyValuePair<int, string>(idx, row["Category"].ToString()));
+                    }
+                }
+            }
+
+            foreach (SearchVM search in vm)
+            {
+                foreach (KeyValuePair<int, string> catBySearchId in categories)
+                {
+                    if (search.SearchId == catBySearchId.Key)
+                    {
+                        search.Category.Add(catBySearchId.Value);
+                    }
                 }
             }
 
