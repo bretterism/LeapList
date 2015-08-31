@@ -13,14 +13,16 @@
 </head>
 <body>
     <div class="container">
-        @if(Request.IsAuthenticated)
+        @if (Request.IsAuthenticated && ViewContext.RouteData.Values["action"] != "Login")
         {
+            @Html.ActionLink("LeapList", "Index", "Profile", new { @class = "btn btn-default" })
             @Html.ActionLink("Sign Out", "SignOut", "Profile", new { @class = "btn btn-default"})
         }
         else if (!Request.IsAuthenticated && ViewContext.RouteData.Values["action"] != "Login")
         {
             @Html.ActionLink("Log In", "Login", "Login", new { @class = "btn btn-default"})
         }
+        
     </div>
     <div class="container body-content">
         @RenderBody()

@@ -7,8 +7,6 @@
 @Html.AntiForgeryToken()
 <h2>Login</h2>
 
-<button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-
 @using (Html.BeginForm(new { @class = "form-horizontal" }))
 {
     @Html.AntiForgeryToken()
@@ -35,7 +33,7 @@
 
     <div class="col-sm-offset-2 col-sm-10">
         <input type="submit" value="Sign In" class="btn btn-default" />
+        @Html.ActionLink("Register", "NewUser", "Login", new { @class = "btn btn-primary" })
     </div>
 }
 
-@Html.ActionLink("Register", "NewUser")
