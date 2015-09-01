@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[Profile] (
+﻿CREATE TABLE [Profile] (
     [ProfileId]    INT            IDENTITY (1, 1) NOT NULL,
     [City]         NVARCHAR (MAX) NULL,
     [Username]     NVARCHAR (MAX) NULL,

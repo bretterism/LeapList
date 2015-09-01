@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[SearchCriteria] (
+﻿CREATE TABLE [SearchCriteria] (
     [SearchId]   INT             IDENTITY (1, 1) NOT NULL,
     [ProfileId]  INT             NOT NULL,
     [SearchText] NVARCHAR (MAX)  NULL,

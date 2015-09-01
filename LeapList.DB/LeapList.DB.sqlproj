@@ -117,4 +117,7 @@
     <Build Include="Tables\SC_Category.sql" />
     <Build Include="Tables\SearchCriteria.sql" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="LeapList.DB.publish.xml" />
+  </ItemGroup>
 </Project>

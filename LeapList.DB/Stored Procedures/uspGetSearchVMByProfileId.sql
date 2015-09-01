@@ -4,7 +4,7 @@
 -- Returns: The SearchVM results for that Profile.
 -----------------------------------------------------------
 
-CREATE PROCEDURE [dbo].[uspGetSearchVMByProfileId]
+CREATE PROCEDURE [uspGetSearchVMByProfileId]
 	@profileId int
 AS
 	SELECT	sc.SearchId, 

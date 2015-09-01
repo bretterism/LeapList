@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[CLItem] (
+﻿CREATE TABLE [CLItem] (
     [ItemId]      INT             IDENTITY (1, 1) NOT NULL,
     [SearchId]    INT             NOT NULL,
     [Title]       NVARCHAR (MAX)  NULL,

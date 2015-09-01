@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[SC_Category] (
+﻿CREATE TABLE [SC_Category] (
     [CategoryId] INT          IDENTITY (1, 1) NOT NULL,
     [SearchId]   INT          NOT NULL,
     [Category]   NVARCHAR (3) NOT NULL,
