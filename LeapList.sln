@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E1C997
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLWatcherApp", "CLWatcherApp\CLWatcherApp.csproj", "{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LeapList.DB", "LeapList.DB\LeapList.DB.sqlproj", "{94F55DC1-C67D-4581-AA96-02797FFBACCD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,6 +32,16 @@ Global
 		{27243870-5413-4995-BC26-59465A2491D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27243870-5413-4995-BC26-59465A2491D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27243870-5413-4995-BC26-59465A2491D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
