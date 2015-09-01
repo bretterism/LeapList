@@ -26,8 +26,13 @@ namespace LeapList.Controllers
 
             ViewBag.User = profileData.Username;
             List<SearchVM> searches = Procedures.GetSearchVMByProfileId(profileData.ProfileId);
-
-
+            foreach (SearchVM search in searches)
+            {
+                for (int i = 0; i < search.Category.Count; i++)
+                {
+                    search.Category[i] = DictCategory.GetCategoryName(search.Category[i]);
+                }
+            }
             return View(searches.GroupBy(g => g.SearchId).Select(s => s.First()).ToList());
         }
 

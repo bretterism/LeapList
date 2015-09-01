@@ -4,6 +4,15 @@
     ViewBag.Title = "Profile";
 }
 
+@*@section jquery{
+    <script>
+    $(document).on("click", ".open-CategoryModal", function(){
+        var mySearchId = $(this).data('id');
+        $(".modal-body #searchId").val(mySearchId);
+    });
+    </script>
+}*@
+
 <h2>Hello, @ViewBag.User</h2>
 
 <h3>Searches</h3>
@@ -21,7 +30,7 @@
             <tbody>
                 @foreach (var svm in Model)
                 {
-                    <tr data-toggle="modal" data-target="#SearchModal">
+                    <tr data-toggle="modal" data-target="#myModal" data-id="@svm.SearchId">
                         <td>@svm.SearchText</td>
                         <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
                         <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
@@ -32,29 +41,8 @@
                                 @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
                             }
                         </td>
-                        <td>
-                            <div class="modal fade" id="SearchModal">
-                                <div class="modal=dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                            <h4 class="modal-title">Search Details</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                            <label class="control-label">Categories</label>
-                                            @foreach (string cat in svm.Category)
-                                            {
-                                                string.Format("{0}", cat);
-                                            }
-                                        </div>
-                                        <div class="modal-footer">
-                                            @Html.ActionLink("Edit", "#", new { @class = "btn btn-default" })
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </td>
+
+                        @Html.Partial("~/Views/Shared/CategoryModal.cshtml", svm.Category)
                     </tr>
                 }
             </tbody>
