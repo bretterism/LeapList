@@ -136,10 +136,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="DataAccess\Authentication.cs" />
-    <Compile Include="DataAccess\CLContext.cs" />
-    <Compile Include="DataAccess\Data.cs" />
-    <Compile Include="DataAccess\Procedures.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -148,17 +144,6 @@
       <DependentUpon>201507220157343_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AddSearchVM.cs" />
-    <Compile Include="Models\CLItem.cs" />
-    <Compile Include="Models\DictCategory.cs" />
-    <Compile Include="Models\Login.cs" />
-    <Compile Include="Models\NewUserVM.cs" />
-    <Compile Include="Models\Profile.cs" />
-    <Compile Include="Models\SC_Category.cs" />
-    <Compile Include="Models\SearchCriteria.cs" />
-    <Compile Include="Models\SearchVM.cs" />
-    <Compile Include="Models\UsernamePassword.cs" />
-    <Compile Include="Models\UserProfileSessionData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Search\Search.cs" />
   </ItemGroup>
@@ -192,6 +177,20 @@
     <EmbeddedResource Include="Migrations\201507220157343_initial.resx">
       <DependentUpon>201507220157343_initial.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LeapList.DataAccess\LeapList.DataAccess.csproj">
+      <Project>{ad3836b4-9579-4a09-b215-530450d9b116}</Project>
+      <Name>LeapList.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapList.Models\LeapList.Models.csproj">
+      <Project>{5aecd3f1-487b-4da4-9c79-9a1a16b708e0}</Project>
+      <Name>LeapList.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LeapList.Security\LeapList.Security.csproj">
+      <Project>{c62af7be-1560-4b5a-9643-42a53e8f6cbe}</Project>
+      <Name>LeapList.Security</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,13 +1,14 @@
+using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Migrations;
+using System.Linq;
+using LeapList.DataAccess;
+using LeapList.Models;
+using LeapList.Security;
+
 namespace LeapList.Migrations
 {
-    using LeapList.DataAccess;
-    using LeapList.Models;
-    using System;
-    using System.Collections.Generic;
-    using System.Data.Entity;
-    using System.Data.Entity.Migrations;
-    using System.Linq;
-
     internal sealed class Configuration : DbMigrationsConfiguration<LeapList.DataAccess.CLContext>
     {
         public Configuration()
@@ -55,7 +56,7 @@ namespace LeapList.Migrations
             var sc_category = new List<SC_Category>
             {
                 new SC_Category {CategoryId = 1, SearchId = 1, Category = "ata"},
-                new SC_Category {CategoryId = 2, SearchId = 1, Category = "sss"},
+                new SC_Category {CategoryId = 2, SearchId = 1, Category = "bfa"},
                 new SC_Category {CategoryId = 3, SearchId = 2, Category = "ela"},
                 new SC_Category {CategoryId = 4, SearchId = 2, Category = "msa"},
                 new SC_Category {CategoryId = 5, SearchId = 3, Category = "fua"},

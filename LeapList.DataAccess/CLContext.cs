@@ -10,7 +10,7 @@ namespace LeapList.DataAccess
         public CLContext()
             : base("CLContext")
         {
-            Database.SetInitializer<CLContext>(new DropCreateDatabaseIfModelChanges<CLContext>());
+            Database.SetInitializer<CLContext>(new CreateDatabaseIfNotExists<CLContext>());
         }
 
         public DbSet<Profile> Profiles { get; set; }

@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList", "LeapList\LeapList.csproj", "{4D85B107-FB43-4750-AD0E-70E88DB4109B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList.Tests", "LeapList.Tests\LeapList.Tests.csproj", "{27243870-5413-4995-BC26-59465A2491D5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E1C99792-2048-42A5-BA73-10E32A729992}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\NuGet.Config = .nuget\NuGet.Config
@@ -18,6 +16,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLWatcherApp", "CLWatcherAp
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LeapList.DB", "LeapList.DB\LeapList.DB.sqlproj", "{94F55DC1-C67D-4581-AA96-02797FFBACCD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList.Models", "LeapList.Models\LeapList.Models.csproj", "{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList.DataAccess", "LeapList.DataAccess\LeapList.DataAccess.csproj", "{AD3836B4-9579-4A09-B215-530450D9B116}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList.Security", "LeapList.Security\LeapList.Security.csproj", "{C62AF7BE-1560-4B5A-9643-42A53E8F6CBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,10 +32,6 @@ Global
 		{4D85B107-FB43-4750-AD0E-70E88DB4109B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D85B107-FB43-4750-AD0E-70E88DB4109B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D85B107-FB43-4750-AD0E-70E88DB4109B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{27243870-5413-4995-BC26-59465A2491D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{27243870-5413-4995-BC26-59465A2491D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{27243870-5413-4995-BC26-59465A2491D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{27243870-5413-4995-BC26-59465A2491D5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,6 +42,18 @@ Global
 		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD3836B4-9579-4A09-B215-530450D9B116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3836B4-9579-4A09-B215-530450D9B116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3836B4-9579-4A09-B215-530450D9B116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3836B4-9579-4A09-B215-530450D9B116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62AF7BE-1560-4B5A-9643-42A53E8F6CBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62AF7BE-1560-4B5A-9643-42A53E8F6CBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62AF7BE-1560-4B5A-9643-42A53E8F6CBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62AF7BE-1560-4B5A-9643-42A53E8F6CBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

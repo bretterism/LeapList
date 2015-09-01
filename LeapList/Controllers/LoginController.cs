@@ -4,8 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using LeapList.Models;
-using LeapList.DataAccess;
 using System.Web.Security;
+using LeapList.DataAccess;
+using LeapList.Security;
 
 namespace LeapList.Controllers
 {
@@ -88,7 +89,12 @@ namespace LeapList.Controllers
                     return View(vm);
                 }
 
-                Profile profile = new Profile(vm.Username, vm.Password, "N/A");
+                Profile profile = new Profile() 
+                {
+                    Username = vm.Username,
+                    PasswordHash = Authentication.GetHash(vm.Password),
+                    City = "N/A"
+                };
 
                 db.AddEntry(profile);
                 CreateCookie(profile, false);

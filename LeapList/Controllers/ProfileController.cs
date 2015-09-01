@@ -6,10 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using LeapList.DataAccess;
-using LeapList.Models;
 using System.Data.Entity.Infrastructure;
 using System.Web.Security;
+using LeapList.DataAccess;
+using LeapList.Models;
+using LeapList.Security;
 
 namespace LeapList.Controllers
 {

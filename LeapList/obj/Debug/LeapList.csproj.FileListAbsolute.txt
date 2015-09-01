@@ -74,3 +74,9 @@ C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.pdb
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.dll
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.xml
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Microsoft.CSharp.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.DataAccess.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Models.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Security.dll
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.DataAccess.pdb
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Models.pdb
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Security.pdb

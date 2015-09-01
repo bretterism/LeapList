@@ -4,17 +4,16 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
-using LeapList.DataAccess;
-using LeapList.Models;
-using System.Web.Security;
 using System.Web.Script.Serialization;
 using System.Web.Mvc;
+using System.Web.Security;
+using LeapList.DataAccess;
+using LeapList.Models;
 
-namespace LeapList.DataAccess
+namespace LeapList.Security
 {
     public class Authentication
     {
-        CLContext db = new CLContext();
 
         public static string GetHash(string toHash)
         {

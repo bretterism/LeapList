@@ -104,42 +104,17 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Tables\" />
-    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Stored Procedures" />
+    <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="dbo\Tables\__MigrationHistory.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\CLItem.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\SearchCriteria.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\Profile.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Tables\SC_Category.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\uspGetSearchVMByProfileId.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\uspGetUsernameAndPasswordHash.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
-    <Build Include="dbo\Stored Procedures\uspCheckIfUserExists.sql">
-      <AnsiNulls>On</AnsiNulls>
-      <QuotedIdentifier>On</QuotedIdentifier>
-    </Build>
+    <Build Include="Stored Procedures\uspCheckIfUserExists.sql" />
+    <Build Include="Stored Procedures\uspGetSearchVMByProfileId.sql" />
+    <Build Include="Stored Procedures\uspGetUsernameAndPasswordHash.sql" />
+    <Build Include="Tables\__MigrationHistory.sql" />
+    <Build Include="Tables\CLItem.sql" />
+    <Build Include="Tables\Profile.sql" />
+    <Build Include="Tables\SC_Category.sql" />
+    <Build Include="Tables\SearchCriteria.sql" />
   </ItemGroup>
 </Project>

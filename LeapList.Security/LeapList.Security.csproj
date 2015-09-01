@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{C62AF7BE-1560-4B5A-9643-42A53E8F6CBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CLWatcherApp</RootNamespace>
-    <AssemblyName>CLWatcherApp</AssemblyName>
+    <RootNamespace>LeapList.Security</RootNamespace>
+    <AssemblyName>LeapList.Security</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -35,6 +33,8 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,12 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildHttp.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Authentication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LeapList.DataAccess\LeapList.DataAccess.csproj">
@@ -57,10 +53,6 @@
     <ProjectReference Include="..\LeapList.Models\LeapList.Models.csproj">
       <Project>{5aecd3f1-487b-4da4-9c79-9a1a16b708e0}</Project>
       <Name>LeapList.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LeapList.Security\LeapList.Security.csproj">
-      <Project>{c62af7be-1560-4b5a-9643-42a53e8f6cbe}</Project>
-      <Name>LeapList.Security</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
