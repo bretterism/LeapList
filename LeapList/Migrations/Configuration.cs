@@ -70,7 +70,7 @@ namespace LeapList.DataAccess.Migrations
                 new CategorySearch {CategoryId = 12, SearchId = 6, Category = "gms", SearchLink = "N/A"}
             };
 
-            categorySearches.ForEach(s => context.SC_Categories.AddOrUpdate(s));
+            categorySearches.ForEach(s => context.CategorySearches.AddOrUpdate(s));
         }
 
         private string GetHash(string plainTextPassword)
