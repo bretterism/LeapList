@@ -109,13 +109,22 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Stored Procedures\uspCheckIfUserExists.sql" />
-    <Build Include="Stored Procedures\uspGetSearchVMByProfileId.sql" />
+    <Build Include="Stored Procedures\uspGetSearchVMByProfileId.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
     <Build Include="Stored Procedures\uspGetUsernameAndPasswordHash.sql" />
     <Build Include="Tables\__MigrationHistory.sql" />
     <Build Include="Tables\CLItem.sql" />
     <Build Include="Tables\Profile.sql" />
-    <Build Include="Tables\SC_Category.sql" />
+    <Build Include="Tables\SC_Category.sql">
+      <AnsiNulls>Off</AnsiNulls>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
     <Build Include="Tables\SearchCriteria.sql" />
+    <Build Include="Tables\CategorySearch.sql">
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
   </ItemGroup>
   <ItemGroup>
     <None Include="LeapList.DB.publish.xml" />

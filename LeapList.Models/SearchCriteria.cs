@@ -27,6 +27,6 @@ namespace LeapList.Models
         
         public virtual ICollection<CLItem> CLItems { get; set; }
         
-        public virtual ICollection<SC_Category> SC_Categories { get; set; }
+        public virtual ICollection<CategorySearch> SC_Categories { get; set; }
     }
 }
