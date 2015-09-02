@@ -1,14 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.Migrations;
-using System.Linq;
-using LeapList.DataAccess;
-using LeapList.Models;
-using LeapList.Security;
-
-namespace LeapList.Migrations
+namespace LeapList.DataAccess.Migrations
 {
+    using System;
+    using System.Data.Entity;
+    using System.Data.Entity.Migrations;
+    using System.Linq;
+    using System.Collections.Generic;
+    using LeapList.Models;
+    using System.Security.Cryptography;
+    using System.Text;
+
     internal sealed class Configuration : DbMigrationsConfiguration<LeapList.DataAccess.CLContext>
     {
         public Configuration()
@@ -20,9 +20,9 @@ namespace LeapList.Migrations
         {
             var profile = new List<Profile>
             {
-                new Profile {ProfileId = 1, City = "Corvallis", Username = "brett", PasswordHash = Authentication.GetHash("abc123")},
-                new Profile {ProfileId = 2, City = "Eugene", Username = "mom", PasswordHash = Authentication.GetHash("abc123")},
-                new Profile {ProfileId = 3, City = "Portland", Username = "devin", PasswordHash = Authentication.GetHash("abc123")}
+                new Profile {ProfileId = 1, City = "Corvallis", Username = "brett", PasswordHash = GetHash("abc123")},
+                new Profile {ProfileId = 2, City = "Eugene", Username = "mom", PasswordHash = GetHash("abc123")},
+                new Profile {ProfileId = 3, City = "Portland", Username = "devin", PasswordHash = GetHash("abc123")}
             };
 
             profile.ForEach(s => context.Profiles.AddOrUpdate(s));
@@ -70,6 +70,11 @@ namespace LeapList.Migrations
             };
 
             sc_category.ForEach(s => context.SC_Categories.AddOrUpdate(s));
+        }
+
+        private string GetHash(string plainTextPassword)
+        { 
+            return BitConverter.ToString(new SHA256Managed().ComputeHash(Encoding.UTF8.GetBytes(plainTextPassword))).Replace("-", string.Empty);
         }
     }
 }
