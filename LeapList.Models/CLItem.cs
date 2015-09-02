@@ -19,8 +19,5 @@ namespace LeapList.Models
         public decimal Price { get; set; }
         public string Link { get; set; }
         public DateTime Date { get; set; }
-
-        [ForeignKey("CategoryId")]
-        public virtual CategorySearch CategorySearches { get; set; }
     }
 }
