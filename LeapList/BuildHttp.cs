@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using System.Xml;
+using System.Text;
+using System.Threading.Tasks;
 using LeapList.Models;
+using System.Web;
 
-namespace LeapList.Search
+namespace LeapList
 {
-    public static class SearchItems
+    class RssPages
     {
-        public static string BuildHttp(SearchVM svm, Profile profile)
+        public static string BuildHttp(SearchVM svm, string category, string city)
         {
             // http://stackoverflow.com/questions/20164298/net-how-to-build-a-url
 
@@ -28,13 +29,13 @@ namespace LeapList.Search
             // Building the full url here.
             UriBuilder url = new UriBuilder();
             url.Scheme = "https:";
-            url.Host = profile.City + ".craigslist.org";
+            url.Host = city + ".craigslist.org";
 
             // When there is no category specified, we search all.
             // Category all = "sss"
-            url.Path = (svm.Category != null ? "search/" + svm.Category : "search/sss");
+            url.Path = (category != null ? "search/" + category : "search/sss");
             url.Query = query.ToString();
-           
+
             return url.ToString();
         }
     }

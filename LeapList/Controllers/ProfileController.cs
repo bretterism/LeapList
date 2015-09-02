@@ -62,14 +62,31 @@ namespace LeapList.Controllers
                     };
 
                     db.AddEntry(sc);
-                    
-                    List<CategorySearch> scc = new List<CategorySearch>();
-                    foreach (CheckBoxCategoryVM c in vm.Categories.Where(w => w.IsChecked))
+
+                    SearchVM searchVM = new SearchVM()
                     {
-                        scc.Add(new CategorySearch { SearchId = sc.SearchId, Category = c.Code });
+                        SearchText = vm.SearchText,
+                        MinPrice = vm.MinPrice,
+                        MaxPrice = vm.MaxPrice
+                    };
+
+                    foreach (CheckBoxCategoryVM checkbox in vm.Categories)
+                    {
+                        if (checkbox.IsChecked)
+                        {
+                            searchVM.Category.Add(checkbox.Code);
+                        }
                     }
 
-                    db.AddEntries(scc);
+                    
+                    List<CategorySearch> catSearch = new List<CategorySearch>();
+                    foreach (CheckBoxCategoryVM c in vm.Categories.Where(w => w.IsChecked))
+                    {
+                        string http = RssPages.BuildHttp(searchVM, c.Code, profileData.City);
+                        catSearch.Add(new CategorySearch { SearchId = sc.SearchId, Category = c.Code, SearchLink = http });
+                    }
+
+                    db.AddEntries(catSearch);
                 }
             }
             catch (RetryLimitExceededException)

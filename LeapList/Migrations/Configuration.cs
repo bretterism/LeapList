@@ -55,18 +55,19 @@ namespace LeapList.DataAccess.Migrations
 
             var categorySearches = new List<CategorySearch>
             {
-                new CategorySearch {CategoryId = 1, SearchId = 1, Category = "ata"},
-                new CategorySearch {CategoryId = 2, SearchId = 1, Category = "bfa"},
-                new CategorySearch {CategoryId = 3, SearchId = 2, Category = "ela"},
-                new CategorySearch {CategoryId = 4, SearchId = 2, Category = "msa"},
-                new CategorySearch {CategoryId = 5, SearchId = 3, Category = "fua"},
-                new CategorySearch {CategoryId = 6, SearchId = 3, Category = "ata"},
-                new CategorySearch {CategoryId = 7, SearchId = 4, Category = "vga"},
-                new CategorySearch {CategoryId = 8, SearchId = 4, Category = "ema"},
-                new CategorySearch {CategoryId = 9, SearchId = 5, Category = "sga"},
-                new CategorySearch {CategoryId = 10, SearchId = 5, Category = "rva"},
-                new CategorySearch {CategoryId = 11, SearchId = 6, Category = "fua"},
-                new CategorySearch {CategoryId = 12, SearchId = 6, Category = "gms"}
+                // TODO: get valid SearchLinks.
+                new CategorySearch {CategoryId = 1, SearchId = 1, Category = "ata", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 2, SearchId = 1, Category = "bfa", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 3, SearchId = 2, Category = "ela", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 4, SearchId = 2, Category = "msa", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 5, SearchId = 3, Category = "fua", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 6, SearchId = 3, Category = "ata", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 7, SearchId = 4, Category = "vga", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 8, SearchId = 4, Category = "ema", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 9, SearchId = 5, Category = "sga", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 10, SearchId = 5, Category = "rva", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 11, SearchId = 6, Category = "fua", SearchLink = "N/A"},
+                new CategorySearch {CategoryId = 12, SearchId = 6, Category = "gms", SearchLink = "N/A"}
             };
 
             categorySearches.ForEach(s => context.SC_Categories.AddOrUpdate(s));

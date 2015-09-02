@@ -18,6 +18,9 @@ namespace LeapList.Models
         [StringLength(3, MinimumLength=3)]
         public string Category { get; set; }
 
+        [Required]
+        public string SearchLink { get; set; }
+
         [ForeignKey("SearchId")]
         public virtual SearchCriteria SearchCriteria { get; set; }
 
