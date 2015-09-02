@@ -63,10 +63,10 @@ namespace LeapList.Controllers
 
                     db.AddEntry(sc);
                     
-                    List<CategorySearch> scc = new List<CategorySearch>();
+                    List<SC_Category> scc = new List<SC_Category>();
                     foreach (CheckBoxCategoryVM c in vm.Categories.Where(w => w.IsChecked))
                     {
-                        scc.Add(new CategorySearch { SearchId = sc.SearchId, Category = c.Code });
+                        scc.Add(new SC_Category { SearchId = sc.SearchId, Category = c.Code });
                     }
 
                     db.AddEntries(scc);

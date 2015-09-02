@@ -4,7 +4,7 @@
 -- Returns: The SearchVM results for that Profile.
 -----------------------------------------------------------
 
-CREATE PROCEDURE [dbo].[uspGetSearchVMByProfileId]
+CREATE PROCEDURE [uspGetSearchVMByProfileId]
 	@profileId int
 AS
 	SELECT	sc.SearchId, 
@@ -13,5 +13,5 @@ AS
 			sc.MinPrice, 
 			sc.MaxPrice
 	FROM	SearchCriteria sc
-	JOIN	CategorySearch cat ON cat.SearchId = sc.SearchId
+	JOIN	SC_Category cat ON cat.SearchId = sc.SearchId
 	WHERE	sc.ProfileId = @profileId;
