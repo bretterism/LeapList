@@ -20,5 +20,7 @@ namespace LeapList.Models
 
         [ForeignKey("SearchId")]
         public virtual SearchCriteria SearchCriteria { get; set; }
+
+        public virtual ICollection<CLItem> CLItems { get; set; }
     }
 }

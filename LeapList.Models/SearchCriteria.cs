@@ -25,8 +25,6 @@ namespace LeapList.Models
         [ForeignKey("ProfileId")]
         public virtual Profile Profile { get; set; }
         
-        public virtual ICollection<CLItem> CLItems { get; set; }
-        
         public virtual ICollection<CategorySearch> CategorySearches { get; set; }
     }
 }

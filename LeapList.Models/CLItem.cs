@@ -13,15 +13,15 @@ namespace LeapList.Models
     {
         [Key]
         public int ItemId { get; set; }
-        public int SearchId { get; set; }
+        public int CategoryId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string Link { get; set; }
         public DateTime Date { get; set; }
 
-        [ForeignKey("SearchId")]
-        public virtual SearchCriteria SearchCriteria { get; set; }
+        [ForeignKey("CategoryId")]
+        public virtual CategorySearch CategorySearches { get; set; }
     }
 
     public static class CLParse
