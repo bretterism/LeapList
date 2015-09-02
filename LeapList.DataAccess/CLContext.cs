@@ -16,7 +16,7 @@ namespace LeapList.DataAccess
         public DbSet<Profile> Profiles { get; set; }
         public DbSet<SearchCriteria> SearchCriteria { get; set; }
         public DbSet<CLItem> CLItems { get; set; }
-        public DbSet<SC_Category> SC_Categories { get; set; }
+        public DbSet<CategorySearch> SC_Categories { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -44,15 +44,15 @@ namespace LeapList.DataAccess
             db.SaveChanges();
         }
 
-        public static void AddEntry(this CLContext db, SC_Category scc)
+        public static void AddEntry(this CLContext db, CategorySearch scc)
         {
             db.SC_Categories.Add(scc);
             db.SaveChanges();
         }
 
-        public static void AddEntries(this CLContext db, List<SC_Category> scc)
+        public static void AddEntries(this CLContext db, List<CategorySearch> scc)
         {
-            foreach (SC_Category c in scc)
+            foreach (CategorySearch c in scc)
             {
                 db.SC_Categories.Add(c);
             }

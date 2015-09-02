@@ -7,7 +7,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LeapList.Models
 {
-    public class SC_Category
+    public class CategorySearch
     {
         [Key]
         public int CategoryId { get; set; }

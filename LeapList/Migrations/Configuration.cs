@@ -53,23 +53,23 @@ namespace LeapList.DataAccess.Migrations
 
             cLItem.ForEach(s => context.CLItems.AddOrUpdate(s));
 
-            var sc_category = new List<SC_Category>
+            var categorySearches = new List<CategorySearch>
             {
-                new SC_Category {CategoryId = 1, SearchId = 1, Category = "ata"},
-                new SC_Category {CategoryId = 2, SearchId = 1, Category = "bfa"},
-                new SC_Category {CategoryId = 3, SearchId = 2, Category = "ela"},
-                new SC_Category {CategoryId = 4, SearchId = 2, Category = "msa"},
-                new SC_Category {CategoryId = 5, SearchId = 3, Category = "fua"},
-                new SC_Category {CategoryId = 6, SearchId = 3, Category = "ata"},
-                new SC_Category {CategoryId = 7, SearchId = 4, Category = "vga"},
-                new SC_Category {CategoryId = 8, SearchId = 4, Category = "ema"},
-                new SC_Category {CategoryId = 9, SearchId = 5, Category = "sga"},
-                new SC_Category {CategoryId = 10, SearchId = 5, Category = "rva"},
-                new SC_Category {CategoryId = 11, SearchId = 6, Category = "fua"},
-                new SC_Category {CategoryId = 12, SearchId = 6, Category = "gms"}
+                new CategorySearch {CategoryId = 1, SearchId = 1, Category = "ata"},
+                new CategorySearch {CategoryId = 2, SearchId = 1, Category = "bfa"},
+                new CategorySearch {CategoryId = 3, SearchId = 2, Category = "ela"},
+                new CategorySearch {CategoryId = 4, SearchId = 2, Category = "msa"},
+                new CategorySearch {CategoryId = 5, SearchId = 3, Category = "fua"},
+                new CategorySearch {CategoryId = 6, SearchId = 3, Category = "ata"},
+                new CategorySearch {CategoryId = 7, SearchId = 4, Category = "vga"},
+                new CategorySearch {CategoryId = 8, SearchId = 4, Category = "ema"},
+                new CategorySearch {CategoryId = 9, SearchId = 5, Category = "sga"},
+                new CategorySearch {CategoryId = 10, SearchId = 5, Category = "rva"},
+                new CategorySearch {CategoryId = 11, SearchId = 6, Category = "fua"},
+                new CategorySearch {CategoryId = 12, SearchId = 6, Category = "gms"}
             };
 
-            sc_category.ForEach(s => context.SC_Categories.AddOrUpdate(s));
+            categorySearches.ForEach(s => context.SC_Categories.AddOrUpdate(s));
         }
 
         private string GetHash(string plainTextPassword)
