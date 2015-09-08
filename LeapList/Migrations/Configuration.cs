@@ -18,16 +18,21 @@ namespace LeapList.DataAccess.Migrations
 
         protected override void Seed(LeapList.DataAccess.CLContext context)
         {
-            var profile = new List<Profile>
+            if (!context.Profiles.Any())
+            {
+                var profile = new List<Profile>
             {
                 new Profile {ProfileId = 1, City = "Corvallis", Username = "brett", PasswordHash = GetHash("abc123")},
                 new Profile {ProfileId = 2, City = "Eugene", Username = "mom", PasswordHash = GetHash("abc123")},
                 new Profile {ProfileId = 3, City = "Portland", Username = "devin", PasswordHash = GetHash("abc123")}
             };
 
-            profile.ForEach(s => context.Profiles.AddOrUpdate(s));
+                profile.ForEach(s => context.Profiles.AddOrUpdate(s));
+            }
 
-            var searchCriteria = new List<SearchCriteria>
+            if (!context.SearchCriteria.Any())
+            {
+                var searchCriteria = new List<SearchCriteria>
             {
                 new SearchCriteria {SearchId = 1, ProfileId = 1, MaxPrice = 50, SearchText = "antique"},
                 new SearchCriteria {SearchId = 2, ProfileId = 1, MinPrice = 500, MaxPrice = 1000, SearchText = "speakers"},
@@ -37,9 +42,12 @@ namespace LeapList.DataAccess.Migrations
                 new SearchCriteria {SearchId = 6, ProfileId = 3, MinPrice = 75, SearchText = "bookshelf"}
             };
 
-            searchCriteria.ForEach(s => context.SearchCriteria.AddOrUpdate(s));
+                searchCriteria.ForEach(s => context.SearchCriteria.AddOrUpdate(s));
+            }
 
-            var cLItem = new List<CLItem>
+            if (!context.CLItems.Any())
+            {
+                var cLItem = new List<CLItem>
             {
                 new CLItem {ItemId = 1, CategoryId = 1, Title = "antique chair", Price = 30, Date = DateTime.Parse("7/10/2015 08:15:12 AM")},
                 new CLItem {ItemId = 2, CategoryId = 1, Title = "vintage antique vanity", Price = 50, Date = DateTime.Parse("7/10/2015 09:15:12 AM")},
@@ -51,9 +59,12 @@ namespace LeapList.DataAccess.Migrations
                 new CLItem {ItemId = 8, CategoryId = 6, Title = "dark walnut bookshelf", Price = 150, Date = DateTime.Parse("7/10/2015 03:15:12 PM")},
             };
 
-            cLItem.ForEach(s => context.CLItems.AddOrUpdate(s));
+                cLItem.ForEach(s => context.CLItems.AddOrUpdate(s));
+            }
 
-            var categorySearches = new List<CategorySearch>
+            if (!context.CategorySearches.Any())
+            {
+                var categorySearches = new List<CategorySearch>
             {
                 // TODO: get valid SearchLinks.
                 new CategorySearch {CategoryId = 1, SearchId = 1, Category = "ata", SearchLink = "N/A"},
@@ -70,7 +81,8 @@ namespace LeapList.DataAccess.Migrations
                 new CategorySearch {CategoryId = 12, SearchId = 6, Category = "gms", SearchLink = "N/A"}
             };
 
-            categorySearches.ForEach(s => context.CategorySearches.AddOrUpdate(s));
+                categorySearches.ForEach(s => context.CategorySearches.AddOrUpdate(s));
+            }
         }
 
         private string GetHash(string plainTextPassword)

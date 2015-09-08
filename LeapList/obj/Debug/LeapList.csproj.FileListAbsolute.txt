@@ -83,3 +83,4 @@ C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Security.pdb
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.Initial.resources
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.Initial1.resources
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.poop.resources
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations._9820151.resources
