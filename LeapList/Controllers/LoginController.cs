@@ -38,7 +38,7 @@ namespace LeapList.Controllers
             {
                 if (Authentication.ValidateUser(user.Username, user.Password))
                 {
-                    Profile profile = db.Profiles.Where(x => x.Username == user.Username).FirstOrDefault();
+                    UserProfile profile = db.UserProfiles.Where(x => x.Username == user.Username).FirstOrDefault();
 
                     var profileData = new UserProfileSessionData
                     {
@@ -89,7 +89,7 @@ namespace LeapList.Controllers
                     return View(vm);
                 }
 
-                Profile profile = new Profile() 
+                UserProfile profile = new UserProfile() 
                 {
                     Username = vm.Username,
                     PasswordHash = Authentication.GetHash(vm.Password),
@@ -128,7 +128,7 @@ namespace LeapList.Controllers
             return RedirectToAction("Index", "Profile");
         }
 
-        private void CreateCookie(Profile profile, bool rememberMe)
+        private void CreateCookie(UserProfile profile, bool rememberMe)
         {
             var profileData = new UserProfileSessionData
             {

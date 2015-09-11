@@ -13,7 +13,7 @@ namespace LeapList.DataAccess
             Database.SetInitializer<CLContext>(new DropCreateDatabaseAlways<CLContext>());
         }
 
-        public DbSet<Profile> Profiles { get; set; }
+        public DbSet<UserProfile> UserProfiles { get; set; }
         public DbSet<SearchCriteria> SearchCriteria { get; set; }
         public DbSet<CLItem> CLItems { get; set; }
         public DbSet<CategorySearch> CategorySearches { get; set; }
@@ -26,9 +26,9 @@ namespace LeapList.DataAccess
 
     public static class Transactions
     {
-        public static void AddEntry(this CLContext db, Profile profile)
+        public static void AddEntry(this CLContext db, UserProfile profile)
         {
-            db.Profiles.Add(profile);
+            db.UserProfiles.Add(profile);
             db.SaveChanges();
         }
         public static void AddEntry(this CLContext db, SearchCriteria sc)
@@ -61,10 +61,10 @@ namespace LeapList.DataAccess
 
         public static void UpdateCityForProfile(this CLContext db, UserProfileSessionData profileData)
         {
-            Profile profile = db.Profiles.Find(profileData.ProfileId);
+            UserProfile profile = db.UserProfiles.Find(profileData.ProfileId);
             profile.City = profileData.City;
 
-            db.Profiles.Attach(profile);
+            db.UserProfiles.Attach(profile);
             var entry = db.Entry(profile);
 
             entry.Property(e => e.City).IsModified = true;

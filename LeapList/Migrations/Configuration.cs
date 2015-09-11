@@ -18,16 +18,16 @@ namespace LeapList.DataAccess.Migrations
 
         protected override void Seed(LeapList.DataAccess.CLContext context)
         {
-            if (!context.Profiles.Any())
+            if (!context.UserProfiles.Any())
             {
-                var profile = new List<Profile>
+                var profile = new List<UserProfile>
             {
-                new Profile {ProfileId = 1, City = "Corvallis", Username = "brett", PasswordHash = GetHash("abc123")},
-                new Profile {ProfileId = 2, City = "Eugene", Username = "mom", PasswordHash = GetHash("abc123")},
-                new Profile {ProfileId = 3, City = "Portland", Username = "devin", PasswordHash = GetHash("abc123")}
+                new UserProfile {ProfileId = 1, City = "Corvallis", Username = "brett", PasswordHash = GetHash("abc123")},
+                new UserProfile {ProfileId = 2, City = "Eugene", Username = "mom", PasswordHash = GetHash("abc123")},
+                new UserProfile {ProfileId = 3, City = "Portland", Username = "devin", PasswordHash = GetHash("abc123")}
             };
 
-                profile.ForEach(s => context.Profiles.AddOrUpdate(s));
+                profile.ForEach(s => context.UserProfiles.AddOrUpdate(s));
             }
 
             if (!context.SearchCriteria.Any())

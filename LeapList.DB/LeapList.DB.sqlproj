@@ -105,9 +105,6 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Stored Procedures" />
-    <Folder Include="Tables" />
-    <Folder Include="dbo\" />
-    <Folder Include="dbo\Tables\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Stored Procedures\uspCheckIfUserExists.sql" />
@@ -116,20 +113,6 @@
       <QuotedIdentifier>Off</QuotedIdentifier>
     </Build>
     <Build Include="Stored Procedures\uspGetUsernameAndPasswordHash.sql" />
-    <Build Include="Tables\__MigrationHistory.sql" />
-    <Build Include="Tables\CLItem.sql">
-      <AnsiNulls>Off</AnsiNulls>
-    </Build>
-    <Build Include="Tables\Profile.sql" />
-    <Build Include="Tables\SC_Category.sql">
-      <AnsiNulls>Off</AnsiNulls>
-      <QuotedIdentifier>Off</QuotedIdentifier>
-    </Build>
-    <Build Include="Tables\SearchCriteria.sql" />
-    <Build Include="dbo\Tables\CategorySearch.sql">
-      <QuotedIdentifier>On</QuotedIdentifier>
-      <AnsiNulls>Off</AnsiNulls>
-    </Build>
   </ItemGroup>
   <ItemGroup>
     <None Include="LeapList.DB.publish.xml" />

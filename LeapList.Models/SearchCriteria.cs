@@ -23,7 +23,7 @@ namespace LeapList.Models
         public decimal? MaxPrice { get; set; }
 
         [ForeignKey("ProfileId")]
-        public virtual Profile Profile { get; set; }
+        public virtual UserProfile UserProfile { get; set; }
         
         public virtual ICollection<CategorySearch> CategorySearches { get; set; }
     }

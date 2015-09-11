@@ -10,9 +10,9 @@ using LeapList.Models;
 
 namespace LeapList.Models
 {
-    public class Profile
+    public class UserProfile
     {
-        public Profile() { }
+        public UserProfile() { }
 
         [Key]
         public int ProfileId { get; set; }

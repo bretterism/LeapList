@@ -140,26 +140,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201507220157343_initial.cs" />
-    <Compile Include="Migrations\201507220157343_initial.Designer.cs">
-      <DependentUpon>201507220157343_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509021805237_Initial.cs" />
-    <Compile Include="Migrations\201509021805237_Initial.Designer.cs">
-      <DependentUpon>201509021805237_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509021806257_Initial1.cs" />
-    <Compile Include="Migrations\201509021806257_Initial1.Designer.cs">
-      <DependentUpon>201509021806257_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509021926174_poop.cs" />
-    <Compile Include="Migrations\201509021926174_poop.Designer.cs">
-      <DependentUpon>201509021926174_poop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201509081923532_9.8.2015.1.cs" />
-    <Compile Include="Migrations\201509081923532_9.8.2015.1.Designer.cs">
-      <DependentUpon>201509081923532_9.8.2015.1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -188,23 +168,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507220157343_initial.resx">
-      <DependentUpon>201507220157343_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509021805237_Initial.resx">
-      <DependentUpon>201509021805237_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509021806257_Initial1.resx">
-      <DependentUpon>201509021806257_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509021926174_poop.resx">
-      <DependentUpon>201509021926174_poop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201509081923532_9.8.2015.1.resx">
-      <DependentUpon>201509081923532_9.8.2015.1.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\LeapList.DataAccess\LeapList.DataAccess.csproj">
