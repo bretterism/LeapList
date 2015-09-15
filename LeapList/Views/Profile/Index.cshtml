@@ -4,15 +4,6 @@
     ViewBag.Title = "Profile";
 }
 
-@*@section jquery{
-    <script>
-    $(document).on("click", ".open-CategoryModal", function(){
-        var mySearchId = $(this).data('id');
-        $(".modal-body #searchId").val(mySearchId);
-    });
-    </script>
-}*@
-
 <h2>Hello, @ViewBag.User</h2>
 
 <h3>Searches</h3>
@@ -34,15 +25,9 @@
                         <td>@svm.SearchText</td>
                         <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
                         <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
-                        <td>
-                            @using (Html.BeginForm())
-                            {
-                                @Html.AntiForgeryToken()
-                                @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
-                            }
-                        </td>
+                        
 
-                        @*@Html.Partial("~/Views/Shared/_CategoryModal.cshtml", svm.Category)*@
+                        @Html.Partial("~/Views/Shared/_CategoryModal.cshtml", svm)
                     </tr>
                 }
             </tbody>

@@ -27,13 +27,7 @@ namespace LeapList.Controllers
 
             ViewBag.User = profileData.Username;
             List<AddEditSearchVM> searches = Procedures.GetAddEditSearchVMByProfileId(profileData.ProfileId);
-            //foreach (AddEditSearchVM search in searches)
-            //{
-            //    for (int i = 0; i < search.Categories.Count; i++)
-            //    {
-            //        search.Category[i] = DictCategory.GetCategoryName(search.Category[i]);
-            //    }
-            //}
+            
             return View(searches.GroupBy(g => g.SearchId).Select(s => s.First()).ToList());
         }
 

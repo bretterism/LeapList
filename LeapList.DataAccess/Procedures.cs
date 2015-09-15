@@ -12,7 +12,7 @@ namespace LeapList.DataAccess
         public static List<AddEditSearchVM> GetAddEditSearchVMByProfileId(int profileId)
         {
             List<AddEditSearchVM> addEditSearchVMs = new List<AddEditSearchVM>();
-            List<KeyValuePair<int, string>> categories = new List<KeyValuePair<int, string>>();
+            List<int> uniqueSearches = new List<int>();
 
             using (var data = new DataAccess())
             {
@@ -21,39 +21,39 @@ namespace LeapList.DataAccess
 
                 DataTable results = data.ExecReturnDataTable();
 
+                CheckBoxCategoryVM category = new CheckBoxCategoryVM();
                 foreach (DataRow row in results.Rows)
                 {
-                    AddEditSearchVM search = new AddEditSearchVM
+                    int searchId = Convert.ToInt32(row["SearchId"]);
+                    if (!uniqueSearches.Contains(searchId))
                     {
-                        SearchId = Convert.ToInt32(row["SearchId"]),
-                        SearchText = row["SearchText"].ToString(),
-                        MinPrice = (!(row["MinPrice"] is DBNull) ? Convert.ToDecimal(row["MinPrice"]) : 0m),
-                        MaxPrice = (!(row["MaxPrice"] is DBNull) ? Convert.ToDecimal(row["MaxPrice"]) : 0m)
-                    };
-
-                    addEditSearchVMs.Add(search);
-                    
-                    // Getting the categories for each search
-                    int idx = Convert.ToInt32(row["SearchId"]);
-                    if (row["Category"].ToString() != null)
-                    {
-                        categories.Add(new KeyValuePair<int, string>(idx, row["Category"].ToString()));
-                    }
-                }
-            }
-
-            foreach (AddEditSearchVM s in addEditSearchVMs)
-            {
-                foreach (KeyValuePair<int, string> catBySearchId in categories)
-                {
-                    if (s.SearchId == catBySearchId.Key)
-                    {
-                        CheckBoxCategoryVM checkBox = new CheckBoxCategoryVM()
+                        uniqueSearches.Add(searchId);
+                        AddEditSearchVM search = new AddEditSearchVM
                         {
-                            IsChecked = true,
-                            Name = DictCategory.GetCategoryName(catBySearchId.Value),
-                            Code = catBySearchId.Value
+                            SearchId = Convert.ToInt32(row["SearchId"]),
+                            SearchText = row["SearchText"].ToString(),
+                            MinPrice = (!(row["MinPrice"] is DBNull) ? Convert.ToDecimal(row["MinPrice"]) : 0m),
+                            MaxPrice = (!(row["MaxPrice"] is DBNull) ? Convert.ToDecimal(row["MaxPrice"]) : 0m)
                         };
+
+                        category = new CheckBoxCategoryVM()
+                            {
+                                Code = row["Category"].ToString(),
+                                Name = DictCategory.GetCategoryName(row["Category"].ToString()),
+                                IsChecked = true
+                            };
+
+                        search.Categories.Add(category);
+                        addEditSearchVMs.Add(search);
+                    }
+                    else
+                    {
+                        addEditSearchVMs.Find(x => x.SearchId == searchId).Categories.Add(new CheckBoxCategoryVM()
+                            {
+                                Code = row["Category"].ToString(),
+                                Name = DictCategory.GetCategoryName(row["Category"].ToString()),
+                                IsChecked = true
+                            });
                     }
                 }
             }
