@@ -158,7 +158,7 @@
     <Content Include="Views\Profile\AddSearch.cshtml" />
     <Content Include="Views\Login\NewUser.cshtml" />
     <Content Include="Views\Login\SelectCity.cshtml" />
-    <Content Include="Views\Shared\CategoryModal.cshtml" />
+    <Content Include="Views\Shared\_CategoryModal.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

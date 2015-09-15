@@ -9,21 +9,21 @@ namespace LeapList.DataAccess
 {
     public class Procedures
     {
-        public static List<SearchVM> GetSearchVMByProfileId(int profileId)
+        public static List<AddEditSearchVM> GetAddEditSearchVMByProfileId(int profileId)
         {
-            List<SearchVM> vm = new List<SearchVM>();
+            List<AddEditSearchVM> addEditSearchVMs = new List<AddEditSearchVM>();
             List<KeyValuePair<int, string>> categories = new List<KeyValuePair<int, string>>();
 
             using (var data = new DataAccess())
             {
-                data.ProcedureName = "uspGetSearchVMByProfileId";
+                data.ProcedureName = "uspGetAddEditSearchVMByProfileId";
                 data.AddParm("@ProfileId", SqlDbType.Int, profileId);
 
                 DataTable results = data.ExecReturnDataTable();
 
                 foreach (DataRow row in results.Rows)
                 {
-                    SearchVM s = new SearchVM
+                    AddEditSearchVM search = new AddEditSearchVM
                     {
                         SearchId = Convert.ToInt32(row["SearchId"]),
                         SearchText = row["SearchText"].ToString(),
@@ -31,7 +31,7 @@ namespace LeapList.DataAccess
                         MaxPrice = (!(row["MaxPrice"] is DBNull) ? Convert.ToDecimal(row["MaxPrice"]) : 0m)
                     };
 
-                    vm.Add(s);
+                    addEditSearchVMs.Add(search);
                     
                     // Getting the categories for each search
                     int idx = Convert.ToInt32(row["SearchId"]);
@@ -42,18 +42,23 @@ namespace LeapList.DataAccess
                 }
             }
 
-            foreach (SearchVM search in vm)
+            foreach (AddEditSearchVM s in addEditSearchVMs)
             {
                 foreach (KeyValuePair<int, string> catBySearchId in categories)
                 {
-                    if (search.SearchId == catBySearchId.Key)
+                    if (s.SearchId == catBySearchId.Key)
                     {
-                        search.Category.Add(catBySearchId.Value);
+                        CheckBoxCategoryVM checkBox = new CheckBoxCategoryVM()
+                        {
+                            IsChecked = true,
+                            Name = DictCategory.GetCategoryName(catBySearchId.Value),
+                            Code = catBySearchId.Value
+                        };
                     }
                 }
             }
 
-            return vm;
+            return addEditSearchVMs;
         }
 
         public static UsernamePassword GetUsernameAndPasswordHash(string usernameEntered)

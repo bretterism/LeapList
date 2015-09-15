@@ -10,7 +10,7 @@ namespace LeapList
 {
     class RssPages
     {
-        public static string BuildHttp(SearchVM svm, string category, string city)
+        public static string BuildHttp(AddEditSearchVM svm, string category, string city)
         {
             // http://stackoverflow.com/questions/20164298/net-how-to-build-a-url
 

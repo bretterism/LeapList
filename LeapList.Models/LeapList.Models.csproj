@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddSearchVM.cs" />
+    <Compile Include="AddEditSearchVM.cs" />
     <Compile Include="CLItem.cs" />
     <Compile Include="DictCategory.cs" />
     <Compile Include="Login.cs" />
@@ -52,7 +52,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="CategorySearch.cs" />
     <Compile Include="SearchCriteria.cs" />
-    <Compile Include="SearchVM.cs" />
     <Compile Include="UsernamePassword.cs" />
     <Compile Include="UserProfileSessionData.cs" />
   </ItemGroup>

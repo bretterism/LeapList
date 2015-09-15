@@ -1,4 +1,4 @@
-﻿@model List<LeapList.Models.SearchVM>
+﻿@model List<LeapList.Models.AddEditSearchVM>
 
 @{
     ViewBag.Title = "Profile";
@@ -42,7 +42,7 @@
                             }
                         </td>
 
-                        @Html.Partial("~/Views/Shared/CategoryModal.cshtml", svm.Category)
+                        @*@Html.Partial("~/Views/Shared/_CategoryModal.cshtml", svm.Category)*@
                     </tr>
                 }
             </tbody>

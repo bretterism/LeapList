@@ -26,27 +26,33 @@ namespace LeapList.Controllers
             profileData = AuthCookies.DeserializeCookie<UserProfileSessionData>(HttpContext.Request.Cookies["authenticationToken"]);
 
             ViewBag.User = profileData.Username;
-            List<SearchVM> searches = Procedures.GetSearchVMByProfileId(profileData.ProfileId);
-            foreach (SearchVM search in searches)
-            {
-                for (int i = 0; i < search.Category.Count; i++)
-                {
-                    search.Category[i] = DictCategory.GetCategoryName(search.Category[i]);
-                }
-            }
+            List<AddEditSearchVM> searches = Procedures.GetAddEditSearchVMByProfileId(profileData.ProfileId);
+            //foreach (AddEditSearchVM search in searches)
+            //{
+            //    for (int i = 0; i < search.Categories.Count; i++)
+            //    {
+            //        search.Category[i] = DictCategory.GetCategoryName(search.Category[i]);
+            //    }
+            //}
             return View(searches.GroupBy(g => g.SearchId).Select(s => s.First()).ToList());
+        }
+
+        [HttpGet]
+        public ActionResult EditSearch(AddEditSearchVM searchVM)
+        {
+            return PartialView("CategoryModal", searchVM);
         }
 
         [HttpGet]
         public ActionResult AddSearch()
         {
-            AddSearchVM vm = new AddSearchVM();
+            AddEditSearchVM vm = new AddEditSearchVM();
             vm.Categories = GetCategories();
             return View(vm);
         }
 
         [HttpPost]
-        public ActionResult AddSearch(AddSearchVM vm)
+        public ActionResult AddSearch(AddEditSearchVM vm)
         {
             profileData = AuthCookies.DeserializeCookie<UserProfileSessionData>(HttpContext.Request.Cookies["authenticationToken"]);
             try
@@ -63,26 +69,10 @@ namespace LeapList.Controllers
 
                     db.AddEntry(sc);
 
-                    SearchVM searchVM = new SearchVM()
-                    {
-                        SearchText = vm.SearchText,
-                        MinPrice = vm.MinPrice,
-                        MaxPrice = vm.MaxPrice
-                    };
-
-                    foreach (CheckBoxCategoryVM checkbox in vm.Categories)
-                    {
-                        if (checkbox.IsChecked)
-                        {
-                            searchVM.Category.Add(checkbox.Code);
-                        }
-                    }
-
-                    
                     List<CategorySearch> catSearch = new List<CategorySearch>();
                     foreach (CheckBoxCategoryVM c in vm.Categories.Where(w => w.IsChecked))
                     {
-                        string http = RssPages.BuildHttp(searchVM, c.Code, profileData.City);
+                        string http = RssPages.BuildHttp(vm, c.Code, profileData.City);
                         catSearch.Add(new CategorySearch { SearchId = sc.SearchId, Category = c.Code, SearchLink = http });
                     }
 
@@ -141,11 +131,6 @@ namespace LeapList.Controllers
                 });
             }
             return categories;
-        }
-
-        public void UpdateCategories(string[] selectedCategories, AddSearchVM vm)
-        {
-
         }
     }
 }

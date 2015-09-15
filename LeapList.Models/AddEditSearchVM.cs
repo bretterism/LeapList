@@ -5,13 +5,14 @@ using System.Web;
 
 namespace LeapList.Models
 {
-    public class AddSearchVM
+    public class AddEditSearchVM
     {
+        public int SearchId;
         public string SearchText { get; set; }
         public List<CheckBoxCategoryVM> Categories { get; set; }
         public decimal? MinPrice { get; set; }
         public decimal? MaxPrice { get; set; }
-        public AddSearchVM()
+        public AddEditSearchVM()
         {
             Categories = new List<CheckBoxCategoryVM>();
         }

@@ -1,4 +1,4 @@
-﻿@model List<string>
+﻿@model LeapList.Models.AddEditSearchVM
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog">
@@ -8,10 +8,10 @@
             </div>
             <div class="modal-body">
                 <div class="row">
-                    @foreach(string s in Model)
+                    @foreach(LeapList.Models.CheckBoxCategoryVM cat in Model.Category)
                     {
                         <div class="list-group-item">
-                            @s
+                           @cat.Name
                         </div>
                     }
                 </div>
