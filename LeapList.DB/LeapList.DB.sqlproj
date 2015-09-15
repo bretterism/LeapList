@@ -105,6 +105,8 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Stored Procedures" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Stored Procedures\uspCheckIfUserExists.sql" />
@@ -113,6 +115,10 @@
       <QuotedIdentifier>Off</QuotedIdentifier>
     </Build>
     <Build Include="Stored Procedures\uspGetUsernameAndPasswordHash.sql" />
+    <Build Include="dbo\Stored Procedures\uspGetAddEditSearchVMBySearchId.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
   </ItemGroup>
   <ItemGroup>
     <None Include="LeapList.DB.publish.xml" />

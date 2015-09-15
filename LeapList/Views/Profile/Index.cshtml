@@ -4,6 +4,7 @@
     ViewBag.Title = "Profile";
 }
 
+
 <h2>Hello, @ViewBag.User</h2>
 
 <h3>Searches</h3>
@@ -19,16 +20,21 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach (var svm in Model)
+                @foreach (LeapList.Models.AddEditSearchVM svm in Model)
                 {
-                    <tr data-toggle="modal" data-target="#myModal" data-id="@svm.SearchId">
+                    <tr data-toggle="modal" data-target="#edit-search" data-id="@svm.SearchId">
                         <td>@svm.SearchText</td>
                         <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
                         <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
-                        
-
-                        @Html.Partial("~/Views/Shared/_CategoryModal.cshtml", svm)
+                        <td>
+                            @using (Html.BeginForm())
+                            {
+                                @Html.AntiForgeryToken()
+                                @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
+                            }
+                        </td>
                     </tr>
+                    
                 }
             </tbody>
         </table>

@@ -32,9 +32,10 @@ namespace LeapList.Controllers
         }
 
         [HttpGet]
-        public ActionResult EditSearch(AddEditSearchVM searchVM)
+        public ActionResult EditSearch(int searchId)
         {
-            return PartialView("CategoryModal", searchVM);
+            AddEditSearchVM searchVM = Procedures.GetAddEditSearchVMBySearchId(searchId);
+            return PartialView("_CategoryModal", searchVM);
         }
 
         [HttpGet]

@@ -61,6 +61,40 @@ namespace LeapList.DataAccess
             return addEditSearchVMs;
         }
 
+        public static AddEditSearchVM GetAddEditSearchVMBySearchId(int searchId)
+        {
+            AddEditSearchVM searchVM = new AddEditSearchVM();
+            using (var data = new DataAccess())
+            {
+                data.ProcedureName = "uspGetAddEditSearchVMBySearchId";
+                data.AddParm("@searchId", SqlDbType.Int, searchId);
+
+                DataTable results = data.ExecReturnDataTable();
+
+                DataRow firstRow = results.Rows[0];
+
+                searchVM.SearchId = Convert.ToInt32(firstRow["SearchId"]);
+                searchVM.SearchText = firstRow["SearchText"].ToString();
+                searchVM.MinPrice = (!(firstRow["MinPrice"] is DBNull) ? Convert.ToDecimal(firstRow["MinPrice"]) : 0m);
+                searchVM.MaxPrice = (!(firstRow["MaxPrice"] is DBNull) ? Convert.ToDecimal(firstRow["MaxPrice"]) : 0m);
+
+                CheckBoxCategoryVM category = new CheckBoxCategoryVM();
+                foreach (DataRow row in results.Rows)
+                {   
+                    category = new CheckBoxCategoryVM()
+                        {
+                            Code = row["Category"].ToString(),
+                            Name = DictCategory.GetCategoryName(row["Category"].ToString()),
+                            IsChecked = true
+                        };
+
+                    searchVM.Categories.Add(category);
+                }           
+            }
+
+            return searchVM;
+        }
+
         public static UsernamePassword GetUsernameAndPasswordHash(string usernameEntered)
         {
             using (var data = new DataAccess())
