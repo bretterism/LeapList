@@ -2,6 +2,6 @@
 	@username VARCHAR(255)
 AS
 	SELECT Username, PasswordHash
-	FROM Profile
+	FROM UserProfile
 	WHERE Username = @username
 RETURN 0

@@ -10,7 +10,7 @@ namespace CLWatcherApp
 {
     class RssPages
     {
-        public static string BuildHttp(SearchVM svm, Profile profile)
+        public static string BuildHttp(SearchVM svm, UserProfile profile)
         {
             // http://stackoverflow.com/questions/20164298/net-how-to-build-a-url
 

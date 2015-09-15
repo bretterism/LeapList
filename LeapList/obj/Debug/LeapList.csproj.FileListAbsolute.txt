@@ -67,8 +67,6 @@ C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.xml
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Deployment.xml
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\System.Web.WebPages.Razor.xml
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csprojResolveAssemblyReference.cache
-C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.Migrations.initial.resources
-C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.dll
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.pdb
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.dll
@@ -80,10 +78,6 @@ C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Security.dll
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.DataAccess.pdb
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Models.pdb
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\bin\LeapList.Security.pdb
-C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.Initial.resources
-C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.Initial1.resources
-C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.poop.resources
-C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations._9820151.resources
 C:\Users\Brett\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csprojResolveAssemblyReference.cache
 C:\Users\Brett\Source\Repos\LeapList\LeapList\bin\LeapList.dll.config
 C:\Users\Brett\Source\Repos\LeapList\LeapList\bin\LeapList.dll
@@ -117,3 +111,5 @@ C:\Users\Brett\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.dll
 C:\Users\Brett\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.pdb
 C:\Users\Brett\Source\Repos\LeapList\LeapList\bin\LeapList.DataAccess.pdb
 C:\Users\Brett\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.xml
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.initial.resources
+C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache
