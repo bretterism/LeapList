@@ -33,33 +33,40 @@
             {
                 if (i == 0)
                 {
-                    @Html.Raw("<div class=\"col-md-3\">")
+                    @Html.Raw("<div class=\"btn-toolbar\" role=\"toolbar\">")
+                    @Html.Raw("<div class=\"btn-group btn-group-justified btn-group-fill-height\" data-toggle=\"buttons\" role=\"button\">")
                 }
-                if (i % 10 == 0 && i != 0)
+                if (i % 6 == 0 && i != 0)
                 {
-                    @Html.Raw("</div><div class=\"col-md-3\">")
+                    @Html.Raw("</div><div class=\"btn-toolbar\" role=\"toolbar\">")
+                    @Html.Raw("</div><div class=\"btn-group btn-group-justified btn-group-fill-height\" data-toggle=\"buttons\" role=\"button\">")
                 }
-                <div class="btn-group" data-toggle="buttons">
-                    @if (Model.Categories[i].IsChecked)
-                    {
-                        <label class="btn btn-default active">
-                            @Html.CheckBoxFor(c => c.Categories[i].IsChecked, new { @checked = "checked" }) @Model.Categories[i].Name
-                            @Html.HiddenFor(m => m.Categories[i].Code)
-                            @Html.HiddenFor(m => m.Categories[i].Name)
-                        </label>
-                    }
-                    else
-                    {
-                        <label class="btn btn-default">
-                            @Html.CheckBoxFor(c => c.Categories[i].IsChecked) @Model.Categories[i].Name
-                            @Html.HiddenFor(m => m.Categories[i].Code)
-                            @Html.HiddenFor(m => m.Categories[i].Name)
-                        </label>
-                    }
-                </div>
+                if (Model.Categories[i].IsChecked)
+                {
+                    <label class="btn btn-default active">
+                        @Html.CheckBoxFor(c => c.Categories[i].IsChecked, new { @checked = "checked" }) @Model.Categories[i].Name
+                        @Html.HiddenFor(m => m.Categories[i].Code)
+                        @Html.HiddenFor(m => m.Categories[i].Name)
+                    </label>
+                }
+                else
+                {
+                    <label class="btn btn-default">
+                        @Html.CheckBoxFor(c => c.Categories[i].IsChecked) @Model.Categories[i].Name
+                        @Html.HiddenFor(m => m.Categories[i].Code)
+                        @Html.HiddenFor(m => m.Categories[i].Name)
+                    </label>
+                }
             }
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
             @Html.Raw("</div>")
         </div>
     </div>
-    <input type="submit" value="Submit" class="btn btn-default" />
+    <div class="row">
+        <div class="col-xs-12" style="height:50px;"></div>
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </div>
 }
