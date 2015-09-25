@@ -32,38 +32,36 @@ namespace LeapList.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [AllowAnonymous]
-        public RedirectToRouteResult Login(Login user)
+        public ActionResult Login(Login user)
         {
             if (ModelState.IsValid)
             {
-                if (Authentication.ValidateUser(user.Username, user.Password))
+                if (!Authentication.ValidateUser(user.Username, user.Password))
                 {
-                    UserProfile profile = db.UserProfiles.Where(x => x.Username == user.Username).FirstOrDefault();
+                    ModelState.AddModelError("ValidateErr", "The username and/or password were entered incorrectly.");
+                    return View(user);
+                }
+                UserProfile profile = db.UserProfiles.Where(x => x.Username == user.Username).FirstOrDefault();
 
-                    var profileData = new UserProfileSessionData
-                    {
-                        ProfileId = profile.ProfileId,
-                        City = profile.City,
-                        Username = profile.Username
-                    };
+                var profileData = new UserProfileSessionData
+                {
+                    ProfileId = profile.ProfileId,
+                    City = profile.City,
+                    Username = profile.Username
+                };
 
-                    Response.SetAuthCookie(user.Username, user.RememberMe, profileData);
+                Response.SetAuthCookie(user.Username, user.RememberMe, profileData);
 
-                    if (profileData.City == "N/A")
-                    {
-                        return RedirectToAction("SelectCity");
-                    }
-                    else
-                    {
-                        return RedirectToAction("Index", "Profile");
-                    }
+                if (profileData.City == "N/A")
+                {
+                    return RedirectToAction("SelectCity");
                 }
                 else
                 {
-                    ModelState.AddModelError("", "The Username and Password were incorrect.");
+                    return RedirectToAction("Index", "Profile");
                 }
             }
-            return RedirectToAction("Login");
+            return View(user);
 
         }
 
@@ -83,13 +81,13 @@ namespace LeapList.Controllers
             {
                 if (Procedures.CheckIfUserExists(vm.Username.ToLower()))
                 {
-                    ModelState.AddModelError("UserExists", 
+                    ModelState.AddModelError("UserExists",
                         string.Format("The Username {0} already exists. Please select another username.", vm.Username));
 
                     return View(vm);
                 }
 
-                UserProfile profile = new UserProfile() 
+                UserProfile profile = new UserProfile()
                 {
                     Username = vm.Username,
                     PasswordHash = Authentication.GetHash(vm.Password),
@@ -101,7 +99,7 @@ namespace LeapList.Controllers
 
                 return RedirectToAction("SelectCity");
             }
-            
+
             return View(vm);
         }
 
