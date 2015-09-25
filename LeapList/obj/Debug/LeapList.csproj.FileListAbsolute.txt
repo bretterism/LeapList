@@ -113,3 +113,5 @@ C:\Users\Brett\Source\Repos\LeapList\LeapList\bin\LeapList.DataAccess.pdb
 C:\Users\Brett\Source\Repos\LeapList\LeapList\bin\Newtonsoft.Json.xml
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.initial.resources
 C:\Users\brett.hayes\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache
+C:\Users\Brett\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.DataAccess.Migrations.initial.resources
+C:\Users\Brett\Source\Repos\LeapList\LeapList\obj\Debug\LeapList.csproj.GenerateResource.Cache

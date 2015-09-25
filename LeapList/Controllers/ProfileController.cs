@@ -27,23 +27,89 @@ namespace LeapList.Controllers
 
             ViewBag.User = profileData.Username;
             List<AddEditSearchVM> searches = Procedures.GetAddEditSearchVMByProfileId(profileData.ProfileId);
-            
+
             return View(searches.GroupBy(g => g.SearchId).Select(s => s.First()).ToList());
         }
 
         [HttpGet]
-        public ActionResult EditSearch(int searchId)
+        public ActionResult EditSearch(int? searchId)
         {
-            AddEditSearchVM searchVM = Procedures.GetAddEditSearchVMBySearchId(searchId);
-            return PartialView("_CategoryModal", searchVM);
+            if (searchId == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            ViewBag.AddEdit = "Edit";
+
+            AddEditSearchVM svm = Procedures.GetAddEditSearchVMBySearchId(searchId);
+            List<CheckBoxCategoryVM> checkBoxes = DictCategory.GetCheckBoxCategoryVMList();
+            foreach (CheckBoxCategoryVM checkBox in svm.Categories)
+            {
+                checkBoxes.Single(s => s.Code == checkBox.Code).IsChecked = true;
+            }
+            svm.Categories = checkBoxes;
+
+            return View("AddEditSearch", svm);
+        }
+
+        [HttpPost]
+        public ActionResult EditSearch(AddEditSearchVM vm, AddEditSearchVM oldState, int id)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    profileData = AuthCookies.DeserializeCookie<UserProfileSessionData>(HttpContext.Request.Cookies["authenticationToken"]);
+                    AddEditSearchVM previousState = Procedures.GetAddEditSearchVMBySearchId(id);
+                    
+                    List<UpdateCategories> updateCategories = new List<UpdateCategories>();
+                    foreach (CheckBoxCategoryVM cat in vm.Categories)
+                    {
+                        CheckBoxCategoryVM previousCat = new CheckBoxCategoryVM();
+                        previousCat = previousState.Categories.FirstOrDefault(s => s.Code == cat.Code) ?? null;
+
+                        if (cat.IsChecked && previousCat == null)
+                        {
+                            string http = RssPages.BuildHttp(vm, cat.Code, profileData.City);
+                            updateCategories.Add(new UpdateCategories()
+                            {
+                                Category = cat.Code,
+                                InsertOrDelete = cat.IsChecked,
+                                SearchLink = http
+                            });
+                        }
+
+                        if (previousCat != null && previousCat.IsChecked && !cat.IsChecked)
+                        {
+                            updateCategories.Add(new UpdateCategories()
+                            {
+                                Category = previousCat.Code,
+                                InsertOrDelete = false
+                            });
+                        }
+                    }
+
+                    Procedures.UpdateSearchCriteria(id,
+                        vm.SearchText,
+                        vm.MinPrice ?? default(decimal),
+                        vm.MaxPrice ?? default(decimal),
+                        updateCategories);
+                }
+            }
+            catch (RetryLimitExceededException)
+            {
+                ModelState.AddModelError("", "Unable to save changes. Please try again. If the same error keeps occurring, try again another time.");
+            }
+
+            return RedirectToAction("Index");
         }
 
         [HttpGet]
         public ActionResult AddSearch()
         {
+            ViewBag.AddEdit = "Add";
             AddEditSearchVM vm = new AddEditSearchVM();
             vm.Categories = GetCategories();
-            return View(vm);
+            return View("AddEditSearch", vm);
         }
 
         [HttpPost]
@@ -78,7 +144,7 @@ namespace LeapList.Controllers
             {
                 ModelState.AddModelError("", "Unable to save changes. Please try again. If the same error keeps occurring, try again another time.");
             }
-            
+
             return RedirectToAction("Index");
         }
 

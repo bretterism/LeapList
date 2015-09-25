@@ -12,13 +12,14 @@ namespace LeapList.Models
         [Key]
         public int CategoryId { get; set; }
         
+        [Required]
         public int SearchId { get; set; }
         
         [Required]
         [StringLength(3, MinimumLength=3)]
         public string Category { get; set; }
 
-        [Required]
+        [MaxLength(1000)]
         public string SearchLink { get; set; }
 
         [ForeignKey("SearchId")]

@@ -107,6 +107,7 @@
     <Folder Include="Stored Procedures" />
     <Folder Include="dbo\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\User Defined Types\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Stored Procedures\uspCheckIfUserExists.sql" />
@@ -119,6 +120,13 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
+    <Build Include="dbo\Stored Procedures\uspUpdateSearchCriteria.sql">
+      <AnsiNulls>On</AnsiNulls>
+      <QuotedIdentifier>On</QuotedIdentifier>
+    </Build>
+    <Build Include="dbo\User Defined Types\UpdateCategories.sql" />
+    <Build Include="Stored Procedures\uspGetAddEditSearchVMBySearchId.sql" />
+    <Build Include="Stored Procedures\uspUpdateSearchCriteria.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="LeapList.DB.publish.xml" />

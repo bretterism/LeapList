@@ -1,12 +1,12 @@
 ﻿@model LeapList.Models.AddEditSearchVM
 
 @{
-    ViewBag.Title = "AddSearch";
+    ViewBag.Title = "Add/Edit Search";
 }
 
-<h2>Add Search</h2>
+<h2>@ViewBag.AddEdit Search</h2>
 
-@using (Html.BeginForm(new { @class = "form-horizontal" }))
+@using (Html.BeginForm(new { @class = "form-horizontal", id = Model.SearchId }))
 {
     <div class="form-group col">
         <div class="row">
@@ -39,16 +39,27 @@
                 {
                     @Html.Raw("</div><div class=\"col-md-3\">")
                 }
-                <div class="checkbox">
-                    <label class="col-sm-10">
-                        @Html.CheckBoxFor(m => m.Categories[i].IsChecked, new { id = @Model.Categories[i].Code }) @Model.Categories[i].Name
-                        @Html.HiddenFor(m => m.Categories[i].Code)
-                        @Html.HiddenFor(m => m.Categories[i].Name)
-                    </label>
+                <div class="btn-group" data-toggle="buttons">
+                    @if (Model.Categories[i].IsChecked)
+                    {
+                        <label class="btn btn-default active">
+                            @Html.CheckBoxFor(c => c.Categories[i].IsChecked, new { @checked = "checked" }) @Model.Categories[i].Name
+                            @Html.HiddenFor(m => m.Categories[i].Code)
+                            @Html.HiddenFor(m => m.Categories[i].Name)
+                        </label>
+                    }
+                    else
+                    {
+                        <label class="btn btn-default">
+                            @Html.CheckBoxFor(c => c.Categories[i].IsChecked) @Model.Categories[i].Name
+                            @Html.HiddenFor(m => m.Categories[i].Code)
+                            @Html.HiddenFor(m => m.Categories[i].Name)
+                        </label>
+                    }
                 </div>
             }
             @Html.Raw("</div>")
         </div>
     </div>
-    <input type="submit" value="Add Search" class="btn btn-default"/>
+    <input type="submit" value="Submit" class="btn btn-default" />
 }

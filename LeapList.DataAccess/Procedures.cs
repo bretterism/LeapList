@@ -9,6 +9,35 @@ namespace LeapList.DataAccess
 {
     public class Procedures
     {
+        public static void UpdateSearchCriteria(int searchId, string searchText, decimal minPrice, decimal maxPrice, List<UpdateCategories> categories)
+        {
+            using (var data = new DataAccess())
+            {
+                data.ProcedureName = "uspUpdateSearchCriteria";
+                data.AddParm("@searchId", SqlDbType.Int, searchId);
+                data.AddParm("@searchText", SqlDbType.VarChar, searchText);
+                data.AddParm("@minPrice", SqlDbType.Decimal, minPrice);
+                data.AddParm("@maxPrice", SqlDbType.Decimal, maxPrice);
+
+                DataTable updateCategories = new DataTable();
+                updateCategories.Columns.Add("Category");
+                updateCategories.Columns.Add("InsertOrDelete");
+                updateCategories.Columns.Add("SearchLink");
+
+                foreach (UpdateCategories cat in categories)
+                {
+                    DataRow row = updateCategories.NewRow();
+                    row["Category"] = cat.Category;
+                    row["InsertOrDelete"] = cat.InsertOrDelete;
+                    row["SearchLink"] = cat.SearchLink;
+                    updateCategories.Rows.Add(row);
+                }
+                data.AddParm("@categories", SqlDbType.Structured, updateCategories);
+
+                data.ExecReturnDataTable();
+            }
+        }
+
         public static List<AddEditSearchVM> GetAddEditSearchVMByProfileId(int profileId)
         {
             List<AddEditSearchVM> addEditSearchVMs = new List<AddEditSearchVM>();
@@ -61,7 +90,7 @@ namespace LeapList.DataAccess
             return addEditSearchVMs;
         }
 
-        public static AddEditSearchVM GetAddEditSearchVMBySearchId(int searchId)
+        public static AddEditSearchVM GetAddEditSearchVMBySearchId(int? searchId)
         {
             AddEditSearchVM searchVM = new AddEditSearchVM();
             using (var data = new DataAccess())
@@ -73,7 +102,7 @@ namespace LeapList.DataAccess
 
                 DataRow firstRow = results.Rows[0];
 
-                searchVM.SearchId = Convert.ToInt32(firstRow["SearchId"]);
+                searchVM.SearchId = searchId ?? default(int);
                 searchVM.SearchText = firstRow["SearchText"].ToString();
                 searchVM.MinPrice = (!(firstRow["MinPrice"] is DBNull) ? Convert.ToDecimal(firstRow["MinPrice"]) : 0m);
                 searchVM.MaxPrice = (!(firstRow["MaxPrice"] is DBNull) ? Convert.ToDecimal(firstRow["MaxPrice"]) : 0m);

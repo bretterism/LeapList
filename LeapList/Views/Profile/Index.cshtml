@@ -27,11 +27,8 @@
                         <td>@(svm.MinPrice == 0m ? null : svm.MinPrice)</td>
                         <td>@(svm.MaxPrice == 0M ? null : svm.MaxPrice)</td>
                         <td>
-                            @using (Html.BeginForm())
-                            {
-                                @Html.AntiForgeryToken()
-                                @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId })
-                            }
+                            @Html.ActionLink("Delete", "DeleteSearch", new { id = svm.SearchId }) | 
+                            @Html.ActionLink("Edit", "EditSearch", new { searchId = svm.SearchId })
                         </td>
                     </tr>
                     

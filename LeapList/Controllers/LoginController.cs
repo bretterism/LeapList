@@ -112,6 +112,7 @@ namespace LeapList.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult SelectCity(string city)
         {
             // get the cookie

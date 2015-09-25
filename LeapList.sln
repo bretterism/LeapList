@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList", "LeapList\LeapList.csproj", "{4D85B107-FB43-4750-AD0E-70E88DB4109B}"
 EndProject
@@ -13,8 +13,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{E1C997
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CLWatcherApp", "CLWatcherApp\CLWatcherApp.csproj", "{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}"
-EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LeapList.DB", "LeapList.DB\LeapList.DB.sqlproj", "{94F55DC1-C67D-4581-AA96-02797FFBACCD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeapList.Models", "LeapList.Models\LeapList.Models.csproj", "{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}"
 EndProject
@@ -36,12 +34,6 @@ Global
 		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCCCD4BA-1E5A-4F52-81E0-372C5BD7E7FC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{94F55DC1-C67D-4581-AA96-02797FFBACCD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AECD3F1-487B-4DA4-9C79-9A1A16B708E0}.Release|Any CPU.ActiveCfg = Release|Any CPU

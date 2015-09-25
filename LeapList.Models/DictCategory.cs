@@ -107,5 +107,23 @@ namespace LeapList.Models
         {
             return DCategory.ContainsValue(value);
         }
+
+        public static List<CheckBoxCategoryVM> GetCheckBoxCategoryVMList()
+        {
+            List<CheckBoxCategoryVM> checkBoxes = new List<CheckBoxCategoryVM>();
+            Dictionary<string, string> categories = GetCategories();
+
+            foreach(KeyValuePair<string, string> kv in categories)
+            {
+                checkBoxes.Add(new CheckBoxCategoryVM()
+                    {
+                        Code = kv.Key,
+                        Name = kv.Value,
+                        IsChecked = false
+                    });
+            }
+
+            return checkBoxes;
+        }
     }
 }
